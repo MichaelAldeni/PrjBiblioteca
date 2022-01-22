@@ -3,37 +3,27 @@
 using namespace std;
 
 class Libri {
-	int ID;
+	int id;
 	string nome;
 	float prezzo_prestito;
 	bool prestato;
 
-	Autori autore;
-
 public:
-	Libro(int ID, string n, float prz, bool pre);
+	//costruttore parametrizzato
+	Libri(string n, float prz);
 
-	//	void setID();
+	//funzioni set
 	void setNome(string n) { nome = n; };
 	void setPrezzo(float p) { prezzo_prestito = p; };
-	void prestato() { prestato = true; };
 
-	int getID() { return ID; };
-	string getNome() { return nome; };
-	float getPrezzo() { return prezzo_prestito; }
-	bool getPrestato() { return prestato; }
+	//funzioni get
+	int getID() const { return id; };
+	string getNome() const { return nome; };
+	float getPrezzo() const { return prezzo_prestito; }
+	bool getPrestato() const { return prestato; }
 
-//	void ordina_Autore();
-	void ordina_Nome();
-};
+	//funzioni principali
+	void modifica_prestito();
+	void aggiungi();
 
-class Autori : public Libri {
-	string nome, cognome;
-
-public:
-	Autori();
-	void setAutore(string nome, string cognome);
-
-	//		void stampaAutore(string nome, string cognome);
-	//		void delAutore(string nome, string cognome);
 };
