@@ -1,0 +1,37 @@
+\hypertarget{_libri_8h_source}{}\doxysection{Libri.\+h}
+\label{_libri_8h_source}\index{C:/Users/Administrator/Desktop/File su cui lavorare/PrjBiblioteca/Libri.h@{C:/Users/Administrator/Desktop/File su cui lavorare/PrjBiblioteca/Libri.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include "{}Biblioteca.h"{}}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{static} \textcolor{keywordtype}{int} current\_id;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_libri}{Libri}} \{}
+\DoxyCodeLine{8     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{9     \textcolor{keywordtype}{string} nome;}
+\DoxyCodeLine{10     \textcolor{keywordtype}{float} prezzo\_prestito;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{bool} prestato;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \textcolor{comment}{//costruttore parametrizzato}}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_libri}{Libri}}(\textcolor{keywordtype}{string} n, \textcolor{keywordtype}{float} prz);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{//funzioni set}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} setNome(\textcolor{keywordtype}{string} n) \{ nome = n; \};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} setPrezzo(\textcolor{keywordtype}{float} p) \{ prezzo\_prestito = p; \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{//funzioni get}}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} getID()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} id; \};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{string} getNome()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} nome; \};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{float} getPrezzo()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} prezzo\_prestito; \}}
+\DoxyCodeLine{25     \textcolor{keywordtype}{bool} getPrestato()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} prestato; \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{//funzioni principali}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} modifica\_prestito();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} aggiungi();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \};}
+
+\end{DoxyCode}

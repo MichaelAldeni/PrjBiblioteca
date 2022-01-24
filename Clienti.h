@@ -4,70 +4,93 @@ using namespace std;
 
 
 class Clienti {
-	//<summary>Classe clienti</summary> 
-	///<remarks>
-	///<list type="bullet">
-	///<item>Questa classe conterrà tutti i clienti della libreria</item> 
-	///</remarks>/
+	/// <summary>Classe clienti</summary> 
+	/// <remarks>
+	/// <list type="bullet">
+	/// <item>Questa classe conterrà tutti i clienti della libreria</item> 
+	/// </remarks>
 
-	///<summary>Queste sono le variabili utilizzate per l'implementazione della lista</summary>
-	///<param name="nome">Stringa per gestire il nome dell'utente</param>
-	///<param name="cognome">Stringa per gestire il cognome dell'utente</param>
-	///<param name="user">Variabile che gestisce la credenziale di accesso per il login nel programma dell'utente</param>
-	///<param name="password">Password utilizzata per il login nel programma da parte dell'utente</param>
-	///<param name="codice_fiscale">Codice fiscale, utilizzato per identificare il cliente </param>
-	string nome, cognome, user, password, codice_fiscale;
+	/// <summary>Queste sono le variabili utilizzate per l'implementazione della lista</summary>
+	/// <param name="nome">Stringa per gestire il nome dell'utente</param>
+	string nome; 
+	
+	/// <param name="cognome">Stringa per gestire il cognome dell'utente</param>
+	string cognome; 
+	
+	/// <param name="user">Variabile che gestisce la credenziale di accesso per il login nel programma dell'utente</param>
+	string user; 
+	
+	/// <param name="password">Password utilizzata per il login nel programma da parte dell'utente</param>
+	string password; 
+	
+	/// <param name="codice_fiscale">Codice fiscale, utilizzato per identificare il cliente </param>
+	string codice_fiscale; 
+
+	/// <param name="numero_telefono">Variabile che gestisce i numeri di telefono dei vari clienti, 1 per ogni cliente</param>
 	long int numero_telefono;
-	///<param name="numero_telefono">Variabile che gestisce i numeri di telefono dei vari clienti, 1 per ogni cliente</param>
+	
+	/// <param name="n_prestito">Variabile riguardante la gestione dei libri in prestito per ogni cliente</param>
 	int n_prestito;
-	///<param name="n_prestito">Variabile riguardante la gestione dei libri in prestito per ogni cliente</param>
+	
 
 public:
-	///<summary>Funzioni pubbliche della classe dei Clienti</summary>
+
+	/// <summary>Funzioni pubbliche della classe dei Clienti</summary>
 	
 	
-	///<param name="Clienti">Costruttore per la classe Clienti, la inizializza</param> 
+	/// <item>Costruttore per la classe Clienti, la inizializza</item> 
 	Clienti(string n, string c, string us_name, string pass, long int num=0);
 
-	///<param name="setNome">Funzione di assegnazione del nome</param>
+	/// <item>Funzione di assegnazione del nome</item>
 	void setNome(string n) {nome = n; };
 
-	///<param name="setCognome">Funzione di assegnazione per il cognome</param>
+	/// <item>Funzione di assegnazione per il cognome</item>
 	void setCognome(string c) {cognome = c;};
 
-	///<param name="setUser">Funzione di assegnazione per il nome utente scelto dal cliente</param>
+	/// <item>Funzione di assegnazione per il nome utente scelto dal cliente</item>
 	void setUser(string us) { user = us; };
 
-	///<param name="setPassword">Funzione di assegnazione della password scelta dal cliente</param>
+	/// <item>Funzione di assegnazione della password scelta dal cliente</item>
 	void setPassword(string pass) { password = pass; };
 
-	///<param name="setCod_fiscale">Funzione di assegnazione codice fiscale del cliente</param>
+	/// <item>Funzione di assegnazione codice fiscale del cliente</item>
 	void setCod_fiscale(string cod) { codice_fiscale = cod; };
 	
-	///<param name="setNumero">Funzione di assegnazione del numero di telefono del cliente</param>
+	/// <item>Funzione di assegnazione del numero di telefono del cliente</item>
 	void setNumero(long int num) { numero_telefono = num; };
 
-	///<param name="getNome">Funzione di restituzione del nome del cliente</param>
+	/// <item>Funzione di restituzione del nome del cliente</item>
+	/// <returns>Restituisce il nome del cliente</returns>
+	/// <seealso cref="codice_fiscale"/>
 	string getNome()const { return nome; };
-	///<returns>Restituisce il nome del cliente</returns>
+	
 
-	///<param name="getCognome">Funzione di restituzuione del cognome del cliente</param>
+	/// <item>Funzione di restituzuione del cognome del cliente</item>
+	/// <returns>Restituisce il cognome del cliente</returns>
+	/// <seealso cref="cognome"/>
 	string getCognome()const { return cognome; };
-	///<returns>Restituisce il cognome del cliente</returns>
 
-	///<param name="getUser">Funzione di restituzuione del nome utetnte del cliente</param>
+	/// <item>Funzione di restituzuione del nome utetnte del cliente</item>
+	/// <returns>Restituisce il nome utente del cliente</returns>
+	/// <seealso cref="user"/>
 	string getUser()const { return user; };
 	
-	///<param name="getPassword">Funzione di restituzuione della password del cliente, costante in modo da non essre modificata</param>
+	/// <item>Funzione di restituzuione della password del cliente, costante in modo da non essre modificata</item>
+	/// <returns>Restituisce la password del cliente</returns>
+	/// <seealso cref="password"/>
 	string getPassword()const { return password; };
-	///<returns>Restituisce la password del cliente</returns>
+	
 
-	///<param name="getCod_fiscale">Funzione di restituzuione della codice fiscale del cliente</param>
+	/// <item>Funzione di restituzuione della codice fiscale del cliente</item>
+	/// <returns>Restituisce il codice fiscale del cliente</returns>
+	/// <seealso cref="codice_fiscale"/>
 	string getCod_fiscale()const { return codice_fiscale; };
-	///<returns>Restituisce il codice fiscale del cliente</returns>
+	
 
-	///<param name="getNumero">Funzione di restituzuione della numero del cliente</param>
+	/// <item>Funzione di restituzuione della numero del cliente</item>
+	/// <returns>Restituisce il numero di telefono del cliente</returns>
+	/// /// <seealso cref="numero_telefono"/>
 	long int getNumero()const { return numero_telefono; };
-	///<returns>Restituisce il numero di telefono del cliente</returns>
+	
 
 };
