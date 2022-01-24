@@ -1,5 +1,7 @@
 #include "Biblioteca.h"
 
+static int current_id;
+
 using namespace std;
 
 class Libri {
