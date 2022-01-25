@@ -1,43 +1,90 @@
+/// <seealso cref="Biblioteca.h"/>
 #include "Biblioteca.h"
-
 using namespace std;
 
+/// <param name="current_id">Variabile utilizzata per autoincrementare l'ID.</param>
 static int current_id = 0;
 
 
 class Libri {
+	/// <summary>Classe dei libri</summary>
+	/// <remarks>
+	/// <list type="bullet">
+	/// <item>Questa classe conterrà tutti i libri presenti nella biblioteca.</item> 
+	/// </remarks>
+
+	/// <summary>Queste sono le variabili utilizzate per l'implementazione della lista.</summary>
+	/// <param name="id">ID univoco assegnato automaticamente dal sistema.</param>
 	int id;
-	string nome, autore;
+
+	/// <param name="nome">Stringa utilizzata per gestire i nomi dei libri.</param>
+	string nome;
+
+	/// <param name="autore">Stringa utilizzata per gestire l'autore di ogni libro.</param>
+	string autore;
+
+	/// <param name="prezzo_prestito">Variabile utilizzata per gestire il prezzo di prestito del libro.</param>
 	float prezzo_prestito;
+
+	/// <param name="prestato">Variabile booleana utilizzata per capire se un libro è stato prestato.</param>
 	bool prestato;
 
 public:
-	//costruttore base
+	/// <summary>Funzioni pubbliche della classe dei Clienti.</summary>
+
+	/// <item>Costruttore base della classe libri.</item>
 	Libri();
-	//costruttore parametrizzato
+
+	/// <item>Costruttore parametrizzato della classe libri.</item>
 	Libri(string n, string a, float prz);
-	//distruttore
+	
+	/// <item>Distruttore della classe.</item>
 	~Libri();
-	//costruttore di copia
+
+	/// <item>Costruttore di copia della classe.</item>
 	Libri(const Libri& l);
 
-	//funzioni set
+	/// <item>Funzione di assegnazione del nome del libro.</item>
 	void setNome(string n) { nome = n; };
+
+	/// <item>Funzione di assegnazione dell' autore del libro.</item>
 	void setAutore(string a) { nome = a; };
+
+	/// <item>Funzione di assegnazione del prezzo del libro.</item>
 	void setPrezzo(float p) { prezzo_prestito = p; };
 
-	//funzioni get
+	/// <item>Funzione di restituzione dell'ID del libro.</item>
+	/// <returns>Restituisce l'ID del libro</returns>
+	/// <seealso cref="id"/>
 	int getID() const { return id; };
+
+	/// <item>Funzione di restituzione del nome del libro.</item>
+	/// <returns>Restituisce il nome del libro</returns>
+	/// <seealso cref="nome"/>
 	string getNome() const { return nome; };
+
+	/// <item>Funzione di restituzione dell'autore del libro.</item>
+	/// <returns>Restituisce l'ID del libro</returns>
+	/// <seealso cref="autore"/>
 	string getAutore() const { return autore; };
+
+	/// <item>Funzione di restituzione del prezzo del libro.</item>
+	/// <returns>Restituisce il prezzo del libro</returns>
+	/// <seealso cref="prezzo_prestito"/>
 	float getPrezzo() const { return prezzo_prestito; }
+
+	/// <item>Funzione di restituzione dell'autore del libro.</item>
+	/// <returns>Restituisce l'ID del libro</returns>
+	/// <seealso cref="prestato"/>
 	bool getPrestato() const { return prestato; }
 
-	//overloading
+	/// <item>Funzione di ridefinizione dell'operatore "=". </item>
 	Libri& operator=(const Libri& l);
 
-	//funzioni principali
+	/// <item>Funzione di aggiornamento del prezzo di un determinato libri.</item>
 	void modifica_prestito();
+
+	/// <item>Funzione che permette di aggiungere dei libri al vettore.</item>
 	Libri aggiungi(ifstream &ifs);
 
 };
