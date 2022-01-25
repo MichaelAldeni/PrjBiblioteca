@@ -1,3 +1,9 @@
+/// <summary>File di origine della classe "Clienti"</summary> 
+/// <remarks>
+/// <list type="bullet">
+/// <item>Questo file conterrà tutto il codice riguardante l'implementazione della classe Clienti.</item> 
+/// </remarks>
+/// <seealso cref="Libri.h"/>
 #include "Libri.h"
 
 

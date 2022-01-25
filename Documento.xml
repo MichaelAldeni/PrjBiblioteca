@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "PrjBiblioteca"
+    </assembly>
+    <members>
+        <member name="M:Clienti.getNumero">
+            <item>Funzione di restituzuione della numero del cliente</item>
+            <returns>Restituisce il numero di telefono del cliente</returns>
+/// <seealso cref="F:Clienti.numero_telefono" /></member>
+        <member name="M:Clienti.getCod_fiscale">
+            <item>Funzione di restituzuione della codice fiscale del cliente</item>
+            <returns>Restituisce il codice fiscale del cliente</returns>
+            <seealso cref="F:Clienti.codice_fiscale" />
+        </member>
+        <member name="M:Clienti.getPassword">
+            <item>Funzione di restituzuione della password del cliente, costante in modo da non essre modificata</item>
+            <returns>Restituisce la password del cliente</returns>
+            <seealso cref="F:Clienti.password" />
+        </member>
+        <member name="M:Clienti.getUser">
+            <item>Funzione di restituzuione del nome utetnte del cliente</item>
+            <returns>Restituisce il nome utente del cliente</returns>
+            <seealso cref="F:Clienti.user" />
+        </member>
+        <member name="M:Clienti.getCognome">
+            <item>Funzione di restituzuione del cognome del cliente</item>
+            <returns>Restituisce il cognome del cliente</returns>
+            <seealso cref="F:Clienti.cognome" />
+        </member>
+        <member name="M:Clienti.getNome">
+            <item>Funzione di restituzione del nome del cliente</item>
+            <returns>Restituisce il nome del cliente</returns>
+            <seealso cref="F:Clienti.codice_fiscale" />
+        </member>
+        <member name="M:Clienti.setNumero(System.Int32!System.Runtime.CompilerServices.IsLong)">
+            <item>Funzione di assegnazione del numero di telefono del cliente</item>
+        </member>
+        <member name="M:Clienti.setCod_fiscale(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+            <item>Funzione di assegnazione codice fiscale del cliente</item>
+        </member>
+        <member name="M:Clienti.setPassword(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+            <item>Funzione di assegnazione della password scelta dal cliente</item>
+        </member>
+        <member name="M:Clienti.setUser(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+            <item>Funzione di assegnazione per il nome utente scelto dal cliente</item>
+        </member>
+        <member name="M:Clienti.setCognome(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+            <item>Funzione di assegnazione per il cognome</item>
+        </member>
+        <member name="M:Clienti.setNome(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+            <item>Funzione di assegnazione del nome</item>
+        </member>
+        <member name="M:Clienti.#ctor(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,std.basi">
+            <summary>Funzioni pubbliche della classe dei Clienti</summary>
+            <item>Costruttore per la classe Clienti, la inizializza</item>
+        </member>
+        <member name="F:Clienti.n_prestito">
+            <param name="n_prestito">Variabile riguardante la gestione dei libri in prestito per ogni cliente</param>
+        </member>
+        <member name="F:Clienti.numero_telefono">
+            <param name="numero_telefono">Variabile che gestisce i numeri di telefono dei vari clienti, 1 per ogni cliente</param>
+        </member>
+        <member name="F:Clienti.codice_fiscale">
+            <param name="codice_fiscale">Codice fiscale, utilizzato per identificare il cliente </param>
+        </member>
+        <member name="F:Clienti.password">
+            <param name="password">Password utilizzata per il login nel programma da parte dell'utente</param>
+        </member>
+        <member name="F:Clienti.user">
+            <param name="user">Variabile che gestisce la credenziale di accesso per il login nel programma dell'utente</param>
+        </member>
+        <member name="F:Clienti.cognome">
+            <param name="cognome">Stringa per gestire il cognome dell'utente</param>
+        </member>
+        <!-- Verrà ignorato il commento al documento XML in formato non valido per il membro 'F:Clienti.nome'. -->
+    </members>
+</doc>
