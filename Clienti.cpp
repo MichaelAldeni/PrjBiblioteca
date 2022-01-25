@@ -1,4 +1,3 @@
-#include "Biblioteca.h"
 #include "Clienti.h"
 
 Clienti::Clienti(string n, string c, string us_name, string pass, long int num)
@@ -8,5 +7,5 @@ Clienti::Clienti(string n, string c, string us_name, string pass, long int num)
 	user = us_name;
 	password = pass;
 	numero_telefono = num;
-	
+
 }
