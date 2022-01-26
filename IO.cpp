@@ -1,4 +1,3 @@
-/// <seealso cref="IO.h"/>
 #include "IO.h"
 
 
@@ -14,12 +13,27 @@ vector<Libri> carica_libri() {
 		exit;
 	}
 
-	int i = 0;
 	while (!ifs.eof()) {
 		Libri book;
 		book.aggiungi(ifs);
-		v[i++] = book;
+		v.push_back(book);
 	}
 
 	return v;
+}
+
+void salva_libri(vector<Libri> v) {
+	ofstream ofs;
+	string filename = "Biblioteca.txt";
+
+	ofs.open(filename);
+	if (!ofs.is_open()) {
+		cout << "Errore!: file non aperto correttamente.";
+		exit;
+	}
+
+	vector<Libri>::iterator it = v.begin();
+	for (it = v.begin(); it != v.end(); it++) {
+		ofs << *it << endl;
+	}
 }
