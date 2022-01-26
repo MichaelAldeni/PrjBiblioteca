@@ -1,7 +1,7 @@
 /// <summary>File di origine della classe "Clienti"</summary> 
 /// <remarks>
 /// <list type="bullet">
-/// <item>Questo file conterr‡ tutto il codice riguardante l'implementazione della classe Clienti.</item> 
+/// <item>Questo file conterr√† tutto il codice riguardante l'implementazione della classe Clienti.</item> 
 /// </remarks>
 /// <seealso cref="Libri.h"/>
 #include "Libri.h"
@@ -47,6 +47,11 @@ Libri& Libri::operator=(const Libri& l) {
 	prestato = l.prestato;
 
 	return *this;
+}
+
+ostream& operator<<(ostream& os, Libri l) {
+	os << l.nome << ";" << l.autore << ";" << l.prezzo_prestito;
+	return os;
 }
 
 void Libri::modifica_prestito() {
