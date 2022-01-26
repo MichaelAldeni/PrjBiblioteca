@@ -10,7 +10,7 @@ class Libri {
 	/// <summary>Classe dei libri</summary>
 	/// <remarks>
 	/// <list type="bullet">
-	/// <item>Questa classe conterrà tutti i libri presenti nella biblioteca.</item> 
+	/// <item>Questa classe conterrÃ  tutti i libri presenti nella biblioteca.</item> 
 	/// </remarks>
 
 	/// <summary>Queste sono le variabili utilizzate per l'implementazione della lista.</summary>
@@ -26,7 +26,7 @@ class Libri {
 	/// <param name="prezzo_prestito">Variabile utilizzata per gestire il prezzo di prestito del libro.</param>
 	float prezzo_prestito;
 
-	/// <param name="prestato">Variabile booleana utilizzata per capire se un libro è stato prestato.</param>
+	/// <param name="prestato">Variabile booleana utilizzata per capire se un libro ï¿½ stato prestato.</param>
 	bool prestato;
 
 public:
@@ -80,6 +80,8 @@ public:
 
 	/// <item>Funzione di ridefinizione dell'operatore "=". </item>
 	Libri& operator=(const Libri& l);
+
+	friend ostream& operator<<(ostream& os, Libri l);
 
 	/// <item>Funzione di aggiornamento del prezzo di un determinato libri.</item>
 	void modifica_prestito();

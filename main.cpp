@@ -1,7 +1,7 @@
 //============================================================================
 // Nome        : main.cpp
 // Autore      : Antonio D'Urso, Alessandro Villa, Michael Aldeni
-// Versione     : 1
+// Versione    : 1
 // Descrizione : Gestione di una biblioteca pubblica
 //============================================================================
 
@@ -11,8 +11,10 @@
 #include "IO.h"
 
 int main() {
-	vector<Libri> biblioteca;
-	biblioteca = carica_libri();
+    vector<Libri> biblioteca;
+    cout << biblioteca.capacity() << endl;
+    biblioteca = carica_libri();
+    cout << biblioteca.capacity();
 
 	return 0;
 }
