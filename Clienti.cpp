@@ -1,4 +1,3 @@
-/// <seealso cref="Clienti.h"/>
 #include "Clienti.h"
 
 Clienti::Clienti(string n, string c, string us_name, string pass, long int num)
