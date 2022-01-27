@@ -91,5 +91,6 @@ public:
 
 	friend void aggiungi(vector<Libri> &v);
 	friend void stampa_libri(vector<Libri> v);
-	friend void aggiungi_prestito(vector<Libri>& v);
+	friend void modifica_prestito_vettore(vector<Libri>& v);
+	friend void elimina_libro(vector<Libri>& v);
 };
