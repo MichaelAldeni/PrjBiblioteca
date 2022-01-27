@@ -11,7 +11,7 @@ vector<Libri> carica_libri() {
 	ifs.open(filename);
 	if (!ifs.is_open()) {
 		cout << "Errore!: file non aperto correttamente.";
-		exit;
+		exit(EXIT_FAILURE);
 	}
 
 	while (!ifs.eof()) {
@@ -39,7 +39,7 @@ void salva_libri(vector<Libri> v) {
 	ofs.open(filename);
 	if (!ofs.is_open()) {
 		cout << "Errore!: file non aperto correttamente.";
-		exit;
+		exit(EXIT_FAILURE);
 	}
 
 	vector<Libri>::iterator it = v.begin();

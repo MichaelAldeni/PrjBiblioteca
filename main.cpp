@@ -16,15 +16,12 @@ int main() {
     
     aggiungi(biblioteca);
 
-
-    stampa_libri(biblioteca);
-
+//    stampa_libri(biblioteca);
 
     cin.ignore();
-//  modifica_prestito_vettore(biblioteca);
-        
-    elimina_libro(biblioteca);
-    stampa_libri(biblioteca);
+    modifica_prestito_vettore(biblioteca);
+
+
 
 	return 0;
 }

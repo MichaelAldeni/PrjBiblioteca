@@ -1,8 +1,3 @@
-/// <summary>File di origine della classe "Clienti"</summary> 
-/// <remarks>
-/// <list type="bullet">
-/// <item>Questo file conterrà tutto il codice riguardante l'implementazione della classe Clienti.</item> 
-/// </remarks>
 /// <seealso cref="Libri.h"/>
 #include "Libri.h"
 
@@ -108,25 +103,4 @@ void modifica_prestito_vettore(vector<Libri>& v) {
 	for (int i = 0; i != v.capacity(); i++)
 		if (v[i].getNome() == n)
 			v[i].modifica_prestito();
-		else cout << "Libro non presente in biblioteca" << endl;
-}
-
-void elimina_libro(vector<Libri>& v) {
-	string n;
-
-	cout << "Inserisci il nome del libro da eliminare: ";
-	getline(cin, n);
-	
-
-	int i;
-	for (i = 0; i != v.capacity(); i++)
-		if (v[i].getNome() == n) {
-			v[i].~Libri();
-			break;
-		}
-
-	for (int j = i; j != v.capacity()-1; j++)
-		v[j] = v[j+1];
-
-	v.resize(v.capacity() - 1);
 }
