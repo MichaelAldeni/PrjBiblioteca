@@ -15,13 +15,22 @@ vector<Libri> carica_libri() {
 	}
 
 	while (!ifs.eof()) {
-		Libri book;
-		book.aggiungi(ifs);
+		string n, a, p_s;
+		float p;
+
+		getline(ifs, n, ';');
+		getline(ifs, a, ';');
+		getline(ifs, p_s);
+		p = atof(p_s.c_str());
+
+		Libri book(n, a, p);
+
 		v.push_back(book);
 	}
 
 	return v;
 }
+
 
 void salva_libri(vector<Libri> v) {
 	ofstream ofs;

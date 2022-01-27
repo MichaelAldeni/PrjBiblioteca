@@ -61,20 +61,51 @@ void Libri::modifica_prestito() {
 	return;
 }
 
-Libri Libri::aggiungi(ifstream &ifs) {
-	Libri book;
+void Libri::stampaPrestato() {
+	if (getPrestato() == true)
+		cout << "SI" << endl;
+	else cout << "NO";
+}
 
-	string n, a, p_s;
-	float p;
+void aggiungi(vector<Libri> &v) {
+	string nome, autore;
+	float prezzo;
+	
+	do {
+		cout << "Inserisci il nome: ";
+		getline(cin, nome);
 
-	getline(ifs, n, ';');
-	getline(ifs, a, ';');
-	getline(ifs, p_s);
-	p = atof(p_s.c_str());
+	} while (nome.empty());
+	
+	do {
+		cout << "Inserisci l'autore: ";
+		getline(cin, autore);
 
-	book.setNome(n);
-	book.setAutore(a);
-	book.setPrezzo(p);
+	} while (autore.empty());
 
-	return book;
+	do {
+		cout << "Inserisci il prezzo: ";
+		cin >> prezzo;
+
+	} while (prezzo == 0);
+
+	Libri book(nome, autore, prezzo);
+	v.push_back(book);
+}
+
+void stampa_libri(vector<Libri> v) {
+	vector<Libri>::iterator it;
+	for (it = v.begin(); it != v.end(); it++)
+		cout << *it << endl;
+}
+
+void aggiungi_prestito(vector<Libri>& v) {
+	string n;
+
+	cout << "Inserisci il nome del libro da prestare: ";
+	getline(cin, n);
+
+	for (int i = 0; i != v.capacity(); i++)
+		if (v[i].getNome() == n)
+			v[i].modifica_prestito();
 }

@@ -12,9 +12,16 @@
 
 int main() {
     vector<Libri> biblioteca;
-    cout << biblioteca.capacity() << endl;
     biblioteca = carica_libri();
-    cout << biblioteca.capacity();
+    
+    aggiungi(biblioteca);
+
+//    stampa_libri(biblioteca);
+
+    cin.ignore();
+    aggiungi_prestito(biblioteca);
+
+
 
 	return 0;
 }
