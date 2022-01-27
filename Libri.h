@@ -78,15 +78,18 @@ public:
 	/// <seealso cref="prestato"/>
 	bool getPrestato() const { return prestato; }
 
+	void stampaPrestato();
+
 	/// <item>Funzione di ridefinizione dell'operatore "=". </item>
 	Libri& operator=(const Libri& l);
 
+	/// <item>Funzione di ridefinizione dell'operatore "<<". </item>
 	friend ostream& operator<<(ostream& os, Libri l);
 
 	/// <item>Funzione di aggiornamento del prezzo di un determinato libri.</item>
 	void modifica_prestito();
 
-	/// <item>Funzione che permette di aggiungere dei libri al vettore.</item>
-	Libri aggiungi(ifstream &ifs);
-
+	friend void aggiungi(vector<Libri> &v);
+	friend void stampa_libri(vector<Libri> v);
+	friend void aggiungi_prestito(vector<Libri>& v);
 };
