@@ -7,13 +7,7 @@ static int current_id = 0;
 
 
 class Libri {
-	/// <summary>Classe dei libri</summary>
-	/// <remarks>
-	/// <list type="bullet">
-	/// <item>Questa classe conterrà tutti i libri presenti nella biblioteca.</item> 
-	/// </remarks>
-
-	/// <summary>Queste sono le variabili utilizzate per l'implementazione della lista.</summary>
+	
 	/// <param name="id">ID univoco assegnato automaticamente dal sistema.</param>
 	int id;
 
@@ -89,8 +83,12 @@ public:
 	/// <item>Funzione di aggiornamento del prezzo di un determinato libri.</item>
 	void modifica_prestito();
 
+	/// <item>Funzione utilizzata per aggiungere un libro alla biblioteca.</item>
 	friend void aggiungi(vector<Libri> &v);
+
+	/// <item>Funzione utilizzata per stampare a video tutti i libri presenti nella biblioteca.</item>
 	friend void stampa_libri(vector<Libri> v);
+
+	/// <item>Funzione utilizzata per ricercare un libro nella biblioteca, se lo trova, può essere prestato ad una persona.</item>
 	friend void modifica_prestito_vettore(vector<Libri>& v);
-	friend void elimina_libro(vector<Libri>& v);
 };
