@@ -1,4 +1,4 @@
-/// <seealso cref="Biblioteca.h"/>
+﻿/// <seealso cref="Biblioteca.h"/>
 #include "Biblioteca.h"
 using namespace std;
 
@@ -37,7 +37,7 @@ public:
 
 	/// <item>Costruttore parametrizzato della classe libri.</item>
 	Libri(string n, string a, float prz);
-	
+
 	/// <item>Distruttore della classe.</item>
 	~Libri();
 
@@ -89,7 +89,7 @@ public:
 	/// <item>Funzione di aggiornamento del prezzo di un determinato libri.</item>
 	void modifica_prestito();
 
-	friend void aggiungi(vector<Libri> &v);
+	friend void aggiungi(vector<Libri>& v);
 	friend void stampa_libri(vector<Libri> v);
 	friend void modifica_prestito_vettore(vector<Libri>& v);
 	friend void elimina_libro(vector<Libri>& v);

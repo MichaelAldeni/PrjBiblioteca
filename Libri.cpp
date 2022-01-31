@@ -1,7 +1,7 @@
 /// <summary>File di origine della classe "Clienti"</summary> 
 /// <remarks>
 /// <list type="bullet">
-/// <item>Questo file conterr√† tutto il codice riguardante l'implementazione della classe Clienti.</item> 
+/// <item>Questo file conterr‡ tutto il codice riguardante l'implementazione della classe Clienti.</item> 
 /// </remarks>
 /// <seealso cref="Libri.h"/>
 #include "Libri.h"
@@ -15,7 +15,7 @@ Libri::Libri() {
 	prestato = false;
 }
 
-Libri::Libri(string n,  string a, float prz) {
+Libri::Libri(string n, string a, float prz) {
 	id = current_id++;
 	nome = n;
 	autore = a;
@@ -67,16 +67,16 @@ void Libri::stampaPrestato() {
 	else cout << "NO";
 }
 
-void aggiungi(vector<Libri> &v) {
+void aggiungi(vector<Libri>& v) {
 	string nome, autore;
 	float prezzo;
-	
+
 	do {
 		cout << "Inserisci il nome: ";
 		getline(cin, nome);
 
 	} while (nome.empty());
-	
+
 	do {
 		cout << "Inserisci l'autore: ";
 		getline(cin, autore);
@@ -116,7 +116,7 @@ void elimina_libro(vector<Libri>& v) {
 
 	cout << "Inserisci il nome del libro da eliminare: ";
 	getline(cin, n);
-	
+
 
 	int i;
 	for (i = 0; i != v.capacity(); i++)
@@ -125,8 +125,8 @@ void elimina_libro(vector<Libri>& v) {
 			break;
 		}
 
-	for (int j = i; j != v.capacity()-1; j++)
-		v[j] = v[j+1];
+	for (int j = i; j != v.capacity() - 1; j++)
+		v[j] = v[j + 1];
 
 	v.resize(v.capacity() - 1);
 }
