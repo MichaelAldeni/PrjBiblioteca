@@ -1,5 +1,5 @@
-/// <seealso cref="IO.h"/>
-#include "IO.h"
+#include"IO.h"
+
 
 
 vector<Libri> carica_libri() {
@@ -11,7 +11,7 @@ vector<Libri> carica_libri() {
 	ifs.open(filename);
 	if (!ifs.is_open()) {
 		cout << "Errore!: file non aperto correttamente.";
-		exit;
+		exit(1);
 	}
 
 	while (!ifs.eof()) {
@@ -39,11 +39,104 @@ void salva_libri(vector<Libri> v) {
 	ofs.open(filename);
 	if (!ofs.is_open()) {
 		cout << "Errore!: file non aperto correttamente.";
-		exit;
+		exit(1);
 	}
 
 	vector<Libri>::iterator it = v.begin();
 	for (it = v.begin(); it != v.end(); it++) {
 		ofs << *it << endl;
 	}
+}
+
+vector<Clienti> carica_clienti() 
+{
+	vector<Clienti> v;
+
+	ifstream ifs;
+	string filename = "Clienti.txt";
+
+	ifs.open(filename);
+	if (!ifs.is_open()) {
+		cout << "Errore!: file non aperto correttamente.";
+		exit(1);
+	}
+
+	while (!ifs.eof()) {
+		string n, c, cod_fisc, us_name, pass, num, n_prestito;
+		int  num_prestito;
+
+		getline(ifs, n, ';');
+		getline(ifs, c, ';');
+		getline(ifs, cod_fisc, ';');
+		getline(ifs, num, ';');
+		getline(ifs, us_name, ';');
+		getline(ifs, pass, ';');
+		getline(ifs, n_prestito);
+		num_prestito = atoi(n_prestito.c_str());
+		
+		Clienti x(n, c, cod_fisc, us_name, pass, num, num_prestito);
+		v.push_back(x);
+
+	}
+	return v;
+}
+
+void salva_clienti(vector<Clienti>& v)
+{
+	ofstream ofs;
+	string filename = "Clienti.txt";
+
+	ofs.open(filename);
+	if (!ofs.is_open()) {
+		cout << "Errore!: file non aperto correttamente.";
+		exit(1);
+	}
+
+	vector<Clienti>::iterator it;
+	for (it = v.begin(); it != v.end(); ++it) {
+		ofs << (*it).getNome() << ";" << (*it).getCognome() << ";" << (*it).getCod_fiscale() <<
+			";" << (*it).getNumero() << ";" << (*it).getUser() << ";" << (*it).getPassword() << ";"
+			<< (*it).getPrestito() << endl;
+	}
+}
+
+bool login(vector<Clienti> vect)
+{
+	string user, pass, cod_fisc;
+	bool ceck = false;
+	int i = 6;
+
+	cout << "*********LOGIN*********" << endl;
+	do {
+		cout << "Username: ";
+		getline(cin, user);
+
+		if(user.empty())
+			cout << "ERRORE!\nInserire Username" << endl;
+		if (!is_on(user, vect))
+			cout << "ERRORE!\nUsername non valido" << endl;
+
+	} while (user.empty() || !is_on(user, vect));
+
+	do {
+		cout << "Password: ";
+		getline(cin, pass);
+
+		if (pass.empty())
+			cout << "ERRORE!\nInserire password" << endl;
+		else if (!is_on(pass, vect)) {
+			i--;
+			cout << "ERRORE!\nPassword non valida " << i << "tentativi rimasti" << endl;
+		}
+		else if (i <= 0) {
+			ceck = false;
+			cout << "Login annullato" << endl;
+			exit(1);
+		}
+		else
+			ceck = true;
+
+	} while (pass.empty() || !is_on(pass, vect));
+
+	return ceck;
 }
