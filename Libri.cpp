@@ -72,7 +72,7 @@ void aggiungi(vector<Libri> &v) {
 	float prezzo;
 	
 	do {
-		cout << "Inserisci il nome: ";
+		cout << endl << "Inserisci il nome: ";
 		getline(cin, nome);
 
 	} while (nome.empty());
@@ -97,6 +97,7 @@ void stampa_libri(vector<Libri> v) {
 	vector<Libri>::iterator it;
 	for (it = v.begin(); it != v.end(); it++)
 		cout << *it << endl;
+	cout << endl;
 }
 
 void modifica_prestito_vettore(vector<Libri>& v) {
