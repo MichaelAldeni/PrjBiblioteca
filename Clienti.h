@@ -27,7 +27,7 @@ class Clienti {
 	string codice_fiscale;
 
 	/// <param name="numero_telefono">Variabile che gestisce i numeri di telefono dei vari clienti, 1 per ogni cliente</param>
-	int numero_telefono;
+	string numero_telefono;
 
 	/// <param name="n_prestito">Variabile riguardante la gestione dei libri in prestito per ogni cliente</param>
 	int n_prestito;
@@ -36,7 +36,7 @@ public:
 	///<summary>Funzioni pubbliche della classe dei Clienti</summary>
 
 	///<param name="Clienti">Costruttore per la classe Clienti, la inizializza</param> 
-	Clienti(string n, string c, string cod_fisc, string us_name, string pass, int num);
+	Clienti(string n, string c, string cod_fisc, string us_name, string pass, string num, int num_prestito);
 
 	///<param name="setNome">Funzione di assegnazione del nome</param>
 	void setNome(string n) { nome = n; }
@@ -54,7 +54,10 @@ public:
 	void setCod_fiscale(string cod) { codice_fiscale = cod; }
 
 	///<param name="setNumero">Funzione di assegnazione del numero di telefono del cliente</param>
-	void setNumero(int num) { numero_telefono = num; }
+	void setNumero(string num) { numero_telefono = num; }
+
+	///<param name="setPrestito">Funzione di assegnazione del numero di libri presi in prestito al cliente</param>
+	void setPrestito(int p) { n_prestito = p; }
 
 	///<param name="getNome">Funzione di restituzione del nome del cliente</param>
 	string getNome()const { return nome; }
@@ -76,9 +79,12 @@ public:
 	///<returns>Restituisce il codice fiscale del cliente</returns>
 
 	///<param name="getNumero">Funzione di restituzuione della numero del cliente</param>
-	long int getNumero()const { return numero_telefono; }
+	string getNumero()const { return numero_telefono; }
 	///<returns>Restituisce il numero di telefono del cliente</returns>
 
+	///<param name="getPrestito">Funzione di restituzuione della numero di libri prestati al cliente</param>
+	int getPrestito()const { return n_prestito; }
+	///<returns>Restituisce il numero di libri prestati al cliente</returns>
 
 	friend void registrazione(vector <Clienti>& vect);
 	//funzione che permette di effettuare la registrazione di un nuovo cliente, i dati dei clienti sono memorizzati in un vettore
@@ -89,16 +95,15 @@ public:
 	friend void stampa_Cliente(string user, vector <Clienti>& vect);
 	//stampa delle informazioni di un determinato cliente
 
+	friend void modifica_pass(vector<Clienti> vect, bool log);
+
+
 	friend bool is_on(string str, vector <Clienti>& vect);
-	//funzione ausiliaria, controlla se la stringa str è presente nel vettore vect
+	//funzione ausiliaria, controlla se la stringa str è presente nel vettore
 	friend bool ceck_pass(string str);
 	//funzione ausiliaria, controlla la validità della password
 
-
-
 	// OVERLOAD DEGLI OPERATORI 
 	friend ostream &operator<<(ostream &os, Clienti x);
-
-
 
 };

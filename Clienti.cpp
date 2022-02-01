@@ -1,10 +1,8 @@
-#include "Libreria.h"
 #include "Clienti.h"
 
 #pragma warning(disable : 4996)
 
-
-Clienti::Clienti(string n, string c, string cod_fisc, string us_name, string pass, int num)
+Clienti::Clienti(string n, string c, string cod_fisc, string us_name, string pass, string num, int num_prestito)
 {
 	nome = n;
 	cognome = c;
@@ -12,14 +10,15 @@ Clienti::Clienti(string n, string c, string cod_fisc, string us_name, string pas
 	user = us_name;
 	password = pass;
 	numero_telefono = num;
+	n_prestito = num_prestito;
 
 }
 
 bool is_on(string str, vector<Clienti>& vect)
 {
-	vector<Cliente>::iterator it;
+	vector<Clienti>::iterator it;
 	for (it = vect.begin(); it != vect.end(); it++) {
-		if ((*it).codice_fiscale == str)
+		if (((*it).getCod_fiscale() == str) || ((*it).getUser() == str) || ((*it).getPassword() == str))
 			return true;
 	}
 	return false;
@@ -36,7 +35,7 @@ bool ceck_pass(string str)
 
 void elimina_Cliente(Clienti x, vector <Clienti>& vect)
 {
-	vector<Cliente>::iterator it;
+	vector<Clienti>::iterator it;
 	for (it = vect.begin(); it != vect.end(); it++) {
 		if ((*it).codice_fiscale == x.codice_fiscale)
 			vect.erase(it);
@@ -50,7 +49,7 @@ void registrazione(vector <Clienti>& vect)
 {
 	bool ceck = true;
 	string n, c, us_name, pass, cod_fisc, num;
-	int n_telefono = 0;
+	int num_prestito = 0;
 
 	//inserimento delle generalità del cliente
 		do {
@@ -79,10 +78,9 @@ void registrazione(vector <Clienti>& vect)
 		do {
 			cout << "Numero di cellulare: ";
 			getline(cin, num);
-			n_telefono = atoi(num.c_str());
-			if (n_telefono == 0)
+			if (num.empty())
 				cout << "ERRORE!\nInserire recapito telefonico" << endl;
-		}while (n_telefono == 0);
+		}while (num.empty());
 
 		//creazione del profilo cliente
 		do {
@@ -102,7 +100,7 @@ void registrazione(vector <Clienti>& vect)
 				cout << "ERRORE!\nInserire minimo 6 caratteri" << endl;
 		} while (!ceck_pass(pass));
 
-	Cliente x(n, c, cod_fisc, us_name, pass, n_telefono);
+	Clienti x(n, c, cod_fisc, us_name, pass, num, num_prestito);
 	//chiamata del costruttore e inserimento nel vettore
 	vect.push_back(x);
 
@@ -120,7 +118,7 @@ ostream& operator<<(ostream &os, Clienti x)
 
 void stampa_vettore(vector <Clienti>& vect)
 {
-	vector<Cliente>::iterator it;
+	vector<Clienti>::iterator it;
 
 	for (it = vect.begin(); it != vect.end(); it++) {
 		cout << *it << endl;
@@ -130,7 +128,7 @@ void stampa_vettore(vector <Clienti>& vect)
 
 void stampa_Cliente(string user, vector <Clienti>& vect)
 {
-	vector<Cliente>::iterator it;
+	vector<Clienti>::iterator it;
 
 	for (it = vect.begin(); it != vect.end(); it++) {
 		if ((*it).getUser() == user)
@@ -139,3 +137,42 @@ void stampa_Cliente(string user, vector <Clienti>& vect)
 	return;
 }
 
+void modifica(vector<Clienti> vect, int i)
+{
+	string cod_fisc, pass, user;
+
+	switch (i)
+	{
+	case 1:	//modifica user
+		cout << "*****Modifica Username*****"<<endl;
+
+		do {
+			cout << "Codice fiscale: ";
+			getline(cin, cod_fisc);
+			cout << "Password: ";
+			getline(cin, pass);
+			if (!is_on(cod_fisc, vect) || !is_on(pass, vect))
+				cout << "ERRORE!\nInserire Codice fiscale e password corretti" << endl;
+		} while (!is_on(cod_fisc, vect) || !is_on(pass, vect));
+
+		cout << "Inserire la nuova password: ";
+		getline(cin, pass);
+		
+		vector<Clienti>::iterator it;
+
+		for (it = vect.begin(); it != vect.end(); it++) {
+			if ((*it).getPassword() == pass)
+				(*it).setPassword(pass);
+		}
+
+		break;
+	default:
+
+
+		break;
+	}
+	//ciclo do while con var bool di ausilio
+	//inserisco user e cod
+	//verifico se user e il cod_fisc è coretto
+	//modifico password, altrimenti messaggio di errore
+}
