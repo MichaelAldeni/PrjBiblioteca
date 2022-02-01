@@ -43,11 +43,4 @@
 #include <fstream>
 
 
-
 using namespace std;
-
-/*
-const char DIPUSER[11] = "DIPENDENTE";
-const char DIPPASS[14] = "DIPENDENTE123";
-
-*/
