@@ -7,7 +7,7 @@ class Clienti {
 	/// <summary>Classe clienti</summary> 
 	/// <remarks>
 	/// <list type="bullet">
-	/// <item>Questa classe conterrà tutti i clienti della libreria</item> 
+	/// <item>Questa classe conterrï¿½ tutti i clienti della libreria</item> 
 	/// </remarks>
 
 	/// <summary>Queste sono le variabili utilizzate per l'implementazione della lista</summary>
@@ -88,7 +88,7 @@ public:
 
 	friend void registrazione(vector <Clienti>& vect);
 	//funzione che permette di effettuare la registrazione di un nuovo cliente, i dati dei clienti sono memorizzati in un vettore
-	friend void elimina_Cliente(Clienti x, vector <Clienti>& vect);
+	friend void elimina_Cliente(vector <Clienti>& vect);
 	//funzione che permette di eliminare un cliente dal vettore
 	friend void stampa_vettore(vector <Clienti>& vect);
 	//stampa delle informazione di tutti i clienti registrati 
@@ -99,11 +99,13 @@ public:
 
 
 	friend bool is_on(string str, vector <Clienti>& vect);
-	//funzione ausiliaria, controlla se la stringa str è presente nel vettore
+	//funzione ausiliaria, controlla se la stringa str ï¿½ presente nel vettore
 	friend bool ceck_pass(string str);
-	//funzione ausiliaria, controlla la validità della password
+	//funzione ausiliaria, controlla la validitï¿½ della password
 
 	// OVERLOAD DEGLI OPERATORI 
 	friend ostream &operator<<(ostream &os, Clienti x);
+
+	friend void modifica(vector<Clienti> vect, int i);
 
 };

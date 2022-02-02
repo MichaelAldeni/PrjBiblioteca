@@ -13,8 +13,10 @@ using namespace std;
 
 int main() {
 	vector<Libri> biblioteca;
+	vector<Clienti> clienti;
 
 	biblioteca = carica_libri();
+	clienti = carica_clienti();
 
 	int scelta;
 
@@ -79,27 +81,34 @@ int main() {
 				system("CLS");
 				int scelta_dip_cl;
 				do {
-					cout << "**********************************************" << endl;
-					cout << "************MENU GESTIONE DEI CLIETI**********" << endl;
-					cout << "***Digita l'operazione da voler effettuare:***" << endl << endl;
-					cout << "(1) Mostra i dati dei clienti registrati" << endl;
-					cout << "(2) Elimina l'account di un cliente" << endl;
-					cout << "(3) Indietro" << endl;
-					cout << "(4) Esci" << endl << endl;
-					cout << "Digita il numero corrispondente: ";
-					cin >> scelta_dip_cl;
-				} while (scelta_dip_cl != 1 && scelta_dip_cl != 2 && scelta_dip_cl != 3 && scelta_dip_cl != 4);
-				switch (scelta_dip_cl) {
-				case 1:
-					break;
-				case2:
-					break;
-				case 3: 
-					system("CLS");
-					break;
-				case 4:
-					return 0;
-				}
+					do {
+						cout << "**********************************************" << endl;
+						cout << "***********MENU GESTIONE DEI CLIENTI**********" << endl;
+						cout << "***Digita l'operazione da voler effettuare:***" << endl << endl;
+						cout << "(1) Mostra i dati dei clienti registrati" << endl;
+						cout << "(2) Elimina l'account di un cliente" << endl;
+						cout << "(3) Indietro" << endl;
+						cout << "(4) Esci" << endl << endl;
+						cout << "Digita il numero corrispondente: ";
+						cin >> scelta_dip_cl;
+					} while (scelta_dip_cl != 1 && scelta_dip_cl != 2 && scelta_dip_cl != 3 && scelta_dip_cl != 4);
+					switch (scelta_dip_cl) {
+					case 1:
+						system("CLS");
+						stampa_vettore(clienti);
+						break;
+					case 2:
+						system("CLS");
+						cin.ignore();
+						elimina_Cliente(clienti);
+						break;
+					case 3:
+						system("CLS");
+						break;
+					case 4:
+						return 0;
+					}
+				} while (scelta_dip_cl != 3);
 				break;
 			case 5:
 				return 0;
@@ -107,6 +116,7 @@ int main() {
 		} while (scelta_dip);
 		break;
 	case 2: // registrazione/accesso cliente 
+
 		return 0;
 	}
 
