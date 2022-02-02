@@ -33,14 +33,15 @@ bool ceck_pass(string str)
 	return true;
 }
 
-void elimina_Cliente(Clienti x, vector <Clienti>& vect)
+void elimina_Cliente(vector <Clienti>& vect)
 {
 	vector<Clienti>::iterator it;
+	string cod;
+	cout << "Inserire il codice fiscale del cliente del quale si vuole annullare la registrazione: ";
+	getline(cin, cod);
 	for (it = vect.begin(); it != vect.end(); it++) {
-		if ((*it).codice_fiscale == x.codice_fiscale)
+		if ((*it).getCod_fiscale() == cod)
 			vect.erase(it);
-		else
-			it++;
 	}
 	return;
 }
@@ -51,7 +52,7 @@ void registrazione(vector <Clienti>& vect)
 	string n, c, us_name, pass, cod_fisc, num;
 	int num_prestito = 0;
 
-	//inserimento delle generalità del cliente
+	//inserimento delle generalitï¿½ del cliente
 		do {
 			cout << "Nome: ";
 			getline(cin, n);
@@ -68,7 +69,7 @@ void registrazione(vector <Clienti>& vect)
 			cout << "Codice Fiscale: ";
 			getline(cin, cod_fisc);
 			if (is_on(cod_fisc, vect)) {
-				cout << "ERRORE!" << endl << "L'utente " << n << " " << c << " ha già effettuato la registrazione" << endl;
+				cout << "ERRORE!" << endl << "L'utente " << n << " " << c << " ha giï¿½ effettuato la registrazione" << endl;
 				exit(1);
 			}
 			else if (cod_fisc.empty())
@@ -89,8 +90,8 @@ void registrazione(vector <Clienti>& vect)
 			if(us_name.empty())
 				cout << "ERRORE!\nInserire Username" << endl;
 			else if(is_on(us_name, vect))
-				//non è possibile utilizzare username uguali 
-				cout << "Username già utilizzato\nInserire Username" << endl;
+				//non ï¿½ possibile utilizzare username uguali 
+				cout << "Username giï¿½ utilizzato\nInserire Username" << endl;
 		} while (us_name.empty() || is_on(us_name, vect));
 		do {
 			cout << "Password: " << endl;
@@ -139,12 +140,13 @@ void stampa_Cliente(string user, vector <Clienti>& vect)
 
 void modifica(vector<Clienti> vect, int i)
 {
-	string cod_fisc, pass, user;
+	string cod_fisc, pass, user_name;
+	vector<Clienti>::iterator it;
 
 	switch (i)
 	{
-	case 1:	//modifica user
-		cout << "*****Modifica Username*****"<<endl;
+	case 0:
+		cout << "Modifica Username" << endl;
 
 		do {
 			cout << "Codice fiscale: ";
@@ -152,27 +154,42 @@ void modifica(vector<Clienti> vect, int i)
 			cout << "Password: ";
 			getline(cin, pass);
 			if (!is_on(cod_fisc, vect) || !is_on(pass, vect))
-				cout << "ERRORE!\nInserire Codice fiscale e password corretti" << endl;
+				cout << "ERRORE!\nInserire codice fiscale e password corretti" << endl;
 		} while (!is_on(cod_fisc, vect) || !is_on(pass, vect));
+
+		cout << "Inserire il nuovo username: ";
+		getline(cin, user_name);
+
+		for (it = vect.begin(); it != vect.end(); it++) {
+			cout << "entro nel ciclo" << endl;
+			if ((*it).getCod_fiscale() == cod_fisc) {
+				cout << "entro nell'if" << endl;
+				(*it).user = user_name;
+				cout << "username modificato" << endl;
+			}
+		}
+		break;
+	case 1:
+		cout << "Modifica Password" << endl;
+
+		do {
+			cout << "Username: ";
+			getline(cin, user_name);
+			cout << "Codice fiscale: ";
+			getline(cin, cod_fisc);
+			if (!is_on(cod_fisc, vect) || !is_on(user_name, vect))
+				cout << "ERRORE!\nInserire username e codice fiscale corretti" << endl;
+		} while (!is_on(cod_fisc, vect) || !is_on(user_name, vect));
 
 		cout << "Inserire la nuova password: ";
 		getline(cin, pass);
-		
-		vector<Clienti>::iterator it;
 
 		for (it = vect.begin(); it != vect.end(); it++) {
-			if ((*it).getPassword() == pass)
+			if ((*it).getCod_fiscale() == cod_fisc) {
 				(*it).setPassword(pass);
+				cout << "password modificata" << endl;
+			}
 		}
-
-		break;
-	default:
-
-
 		break;
 	}
-	//ciclo do while con var bool di ausilio
-	//inserisco user e cod
-	//verifico se user e il cod_fisc è coretto
-	//modifico password, altrimenti messaggio di errore
 }

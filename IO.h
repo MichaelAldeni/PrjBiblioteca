@@ -1,9 +1,12 @@
 /// <seealso cref="Biblioteca.h"/>
 #include "Biblioteca.h"
 /// <seealso cref="Libri.h"/>
-#include "Libri.h"cc
+#include "Libri.h"
 
 #include"Clienti.h"
+
+string const DIPUSER = "DIPENDENTE";
+string const DIPPASS = "DIPENDENTE123";
 
 /// <summary>Funzione di caricamento dei libri nel vettore</summary> 
 vector<Libri> carica_libri();
