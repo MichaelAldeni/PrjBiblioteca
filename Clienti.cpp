@@ -138,58 +138,79 @@ void stampa_Cliente(string user, vector <Clienti>& vect)
 	return;
 }
 
-void modifica(vector<Clienti> vect, int i)
+void modifica(vector<Clienti>& vect, int i, string& u, string& p, string& cf)
 {
-	string cod_fisc, pass, user_name;
 	vector<Clienti>::iterator it;
 
 	switch (i)
 	{
 	case 0:
-		cout << "Modifica Username" << endl;
+		cout << "*****Modifica Username*****" << endl;
 
 		do {
 			cout << "Codice fiscale: ";
-			getline(cin, cod_fisc);
+			getline(cin, cf);
 			cout << "Password: ";
-			getline(cin, pass);
-			if (!is_on(cod_fisc, vect) || !is_on(pass, vect))
+			getline(cin, p);
+			if (!is_on(cf, vect) || !is_on(p, vect))
 				cout << "ERRORE!\nInserire codice fiscale e password corretti" << endl;
-		} while (!is_on(cod_fisc, vect) || !is_on(pass, vect));
+		} while (!is_on(cf, vect) || !is_on(p, vect));
 
 		cout << "Inserire il nuovo username: ";
-		getline(cin, user_name);
+		getline(cin, u);
 
 		for (it = vect.begin(); it != vect.end(); it++) {
 			cout << "entro nel ciclo" << endl;
-			if ((*it).getCod_fiscale() == cod_fisc) {
+			if ((*it).getCod_fiscale() == cf) {
 				cout << "entro nell'if" << endl;
-				(*it).user = user_name;
+				(*it).setUser(u);
 				cout << "username modificato" << endl;
 			}
 		}
 		break;
 	case 1:
-		cout << "Modifica Password" << endl;
+		cout << "*****Modifica Password*****" << endl;
 
 		do {
 			cout << "Username: ";
-			getline(cin, user_name);
+			getline(cin, u);
 			cout << "Codice fiscale: ";
-			getline(cin, cod_fisc);
-			if (!is_on(cod_fisc, vect) || !is_on(user_name, vect))
+			getline(cin, cf);
+			if (!is_on(cf, vect) || !is_on(u, vect))
 				cout << "ERRORE!\nInserire username e codice fiscale corretti" << endl;
-		} while (!is_on(cod_fisc, vect) || !is_on(user_name, vect));
+		} while (!is_on(cf, vect) || !is_on(u, vect));
 
 		cout << "Inserire la nuova password: ";
-		getline(cin, pass);
+		getline(cin, p);
 
 		for (it = vect.begin(); it != vect.end(); it++) {
-			if ((*it).getCod_fiscale() == cod_fisc) {
-				(*it).setPassword(pass);
+			if ((*it).getCod_fiscale() == cf) {
+				(*it).setPassword(p);
 				cout << "password modificata" << endl;
 			}
 		}
 		break;
 	}
+}
+
+void modifica_prestito_piu(vector<Clienti>& v, string& cf) {
+	string n;
+
+	vector<Clienti>::iterator it;
+	for (it = v.begin(); it != v.end(); ++it)
+		if ((*it).getCod_fiscale() == cf)
+			(*it).setPrestito(1);
+
+		else cout << "Utente non registrato" << endl;
+}
+
+void modifica_prestito_meno(vector<Clienti>& v, string& cf) {
+	string n;
+
+	vector<Clienti>::iterator it;
+	for (it = v.begin(); it != v.end(); ++it)
+		if ((*it).getCod_fiscale() == cf)
+			(*it).setPrestito(-1);
+
+		else cout << "Utente non registrato" << endl;
 }

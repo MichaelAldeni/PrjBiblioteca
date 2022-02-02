@@ -57,7 +57,7 @@ public:
 	void setNumero(string num) { numero_telefono = num; }
 
 	///<param name="setPrestito">Funzione di assegnazione del numero di libri presi in prestito al cliente</param>
-	void setPrestito(int p) { n_prestito = p; }
+	void setPrestito(int p) { n_prestito += p; }
 
 	///<param name="getNome">Funzione di restituzione del nome del cliente</param>
 	string getNome()const { return nome; }
@@ -106,6 +106,10 @@ public:
 	// OVERLOAD DEGLI OPERATORI 
 	friend ostream &operator<<(ostream &os, Clienti x);
 
-	friend void modifica(vector<Clienti> vect, int i);
+	friend void modifica(vector<Clienti>& vect, int i, string& u, string& p, string& cf);
+	
+	friend void modifica_prestito_piu(vector<Clienti>& v, string& cf);
+
+	friend void modifica_prestito_meno(vector<Clienti>& v, string& cf);
 
 };
