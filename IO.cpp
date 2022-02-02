@@ -96,35 +96,34 @@ void salva_clienti(vector<Clienti>& v)
 	for (it = v.begin(); it != v.end(); ++it) {
 		ofs << (*it).getNome() << ";" << (*it).getCognome() << ";" << (*it).getCod_fiscale() <<
 			";" << (*it).getNumero() << ";" << (*it).getUser() << ";" << (*it).getPassword() << ";"
-			<< (*it).getPrestito() << endl;
+			<< (*it).getPrestito();
 	}
 }
 
-bool login(vector<Clienti> vect)
+bool login(vector<Clienti> vect, string& u, string& p, string& cf)
 {
-	string user, pass, cod_fisc;
 	bool ceck = false;
 	int i = 6;
 
 	cout << "*********LOGIN*********" << endl;
 	do {
 		cout << "Username: ";
-		getline(cin, user);
+		getline(cin, u);
 
-		if(user.empty())
+		if (u.empty())
 			cout << "ERRORE!\nInserire Username" << endl;
-		if (!is_on(user, vect))
+		if (!is_on(u, vect))
 			cout << "ERRORE!\nUsername non valido" << endl;
 
-	} while (user.empty() || !is_on(user, vect));
+	} while (u.empty() || !is_on(u, vect));
 
 	do {
 		cout << "Password: ";
-		getline(cin, pass);
+		getline(cin, p);
 
-		if (pass.empty())
+		if (p.empty())
 			cout << "ERRORE!\nInserire password" << endl;
-		else if (!is_on(pass, vect)) {
+		else if (!is_on(p, vect)) {
 			i--;
 			cout << "ERRORE!\nPassword non valida " << i << "tentativi rimasti" << endl;
 		}
@@ -136,7 +135,7 @@ bool login(vector<Clienti> vect)
 		else
 			ceck = true;
 
-	} while (pass.empty() || !is_on(pass, vect));
+	} while (p.empty() || !is_on(p, vect));
 
 	return ceck;
 }

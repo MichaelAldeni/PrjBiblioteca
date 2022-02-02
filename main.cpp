@@ -116,8 +116,66 @@ int main() {
 		} while (scelta_dip);
 		break;
 	case 2: // registrazione/accesso cliente 
+		system("CLS");
+		int scelta_log;
+		do {
+			cout << "**********************************************" << endl;
+			cout << "***************ACCEDI/REGISTRATI**************" << endl;
+			cout << " Sei nuovo? Registrati! (1) " << endl;
+			cout << "Hai già un account? Accedi (2) " << endl;
+			cout << "Digita il numero corrispondente: ";
+			cin >> scelta_log;
+		} while (scelta_log != 1 && scelta_log != 2);
+		string username, password, cod_fiscale;
+		
+		if (scelta_log == 1)
+			registrazione(clienti);
 
-		return 0;
+		if (login(clienti, username, password, cod_fiscale)) {
+			system("CLS");
+			int scelta_cl;
+			do {
+				cout << "**********************************************" << endl;
+				cout << "*******MENU GESTIONE BIBLIOTECA/CLIENTI*******" << endl;
+				cout << "Benvenuto/a " << username << endl;
+				cout << "***Digita l'operazione da voler effettuare:***" << endl;
+				cout << "(1) Visualizza la lista completa dei libri" << endl;
+				cout << "(2) Prendi in prestito un libro" << endl;
+				cout << "(3) Restituisci un libro" << endl;
+				cout << "(4) Modifica username o password" << endl;
+				cout << "(5) Esci" << endl << endl;
+				cout << "Digita il numero corrispondente: ";
+				cin >> scelta_cl;
+			} while (scelta_cl != 1 && scelta_cl != 2 && scelta_cl != 3 && scelta_cl != 4 && scelta_cl != 5);
+			switch (scelta_cl) {
+			case 1:
+				system("CLS");
+				stampa_libri(biblioteca);
+				break;
+			case 2:
+				system("CLS");
+				modifica_prestito_vettore(biblioteca);
+				modifica_prestito_piu(clienti, cod_fiscale);
+				break;
+			case 3:
+				system("CLS");
+				modifica_prestito_vettore(biblioteca);
+				modifica_prestito_meno(clienti, cod_fiscale);
+				break;
+			case 4:
+				system("CLS");
+				int i;
+				do {
+					cout << "Cosa vuoi modificare? Username (1) o Password (2) ?" << endl;
+					cout << "Digita il numero corrispondente: ";
+					cin >> i;
+				} while (i != 1 && i != 2);
+				modifica(clienti, i, username, password, cod_fiscale);
+				break;
+			case 5:
+				return 0;
+			}
+		}
 	}
 
 	return 0;

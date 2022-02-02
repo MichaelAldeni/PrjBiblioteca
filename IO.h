@@ -20,5 +20,5 @@ vector<Clienti> carica_clienti();
 void salva_clienti(vector<Clienti> &v);
 
 //funzione che permettere di accedere al proprio profilo utente
-bool login(vector<Clienti> vect);
+bool login(vector<Clienti> vect, string& u, string& p, string& cf);
 
