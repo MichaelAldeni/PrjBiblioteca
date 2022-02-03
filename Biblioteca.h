@@ -1,9 +1,4 @@
-/// <summary>Librerie utilizzate:</summary> 
-
-///<remarks>
-/// <item>Questa libreria dichiara gli oggetti che controllano la lettura e la scrittura nei flussi standard.</item>
-/// <param name="iostream"></param> 
-/// </remarks>
+/// brief Questa libreria dichiara gli oggetti che controllano la lettura e la scrittura nei flussi standard.
 #include <iostream>
 
 ///<remarks>
@@ -29,7 +24,7 @@
 
 ///<remarks>
 /// <item>Viene usato per la lettura e l'esecuzione di const operazioni.</item>
-/// <item>Tipo che fornisce un iteratore ad accesso rapido che pu� leggere qualsiasi elemento const nel vettore</item>
+/// <item>Tipo che fornisce un iteratore ad accesso rapido che puo leggere qualsiasi elemento const nel vettore</item>
 /// <param name="vector"></param> 
 /// </remarks>
 #include <vector>
@@ -43,4 +38,11 @@
 #include <fstream>
 
 
+
 using namespace std;
+
+/*
+const char DIPUSER[11] = "DIPENDENTE";
+const char DIPPASS[14] = "DIPENDENTE123";
+
+*/
