@@ -46,14 +46,19 @@ bool ceck_pass(string str)
 
 void elimina_Cliente(vector <Clienti>& vect)
 {
-	vector<Clienti>::iterator it;
 	string cod;
+	int i, j;
+	vector<Clienti>::iterator it;
+
 	cout << "Inserire il codice fiscale del cliente del quale si vuole annullare la registrazione: ";
 	getline(cin, cod);
-	for (it = vect.begin(); it != vect.end(); it++) {
-		if ((*it).getCod_fiscale() == cod)
+
+	for (it = vect.begin(); it != vect.end(); it++)
+		if ((*it).getCod_fiscale() == cod) {
 			vect.erase(it);
-	}
+			break;
+		}
+
 	return;
 }
 
