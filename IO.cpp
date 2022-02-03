@@ -97,6 +97,8 @@ void salva_clienti(vector<Clienti>& v)
 		ofs << (*it).getNome() << ";" << (*it).getCognome() << ";" << (*it).getCod_fiscale() <<
 			";" << (*it).getNumero() << ";" << (*it).getUser() << ";" << (*it).getPassword() << ";"
 			<< (*it).getPrestito();
+		if (it != v.end())
+			ofs << endl;
 	}
 }
 
