@@ -177,6 +177,7 @@ int main() {
 					cin.ignore();
 					cout << "Inserisci il nome dell'autore da cercare: ";
 					getline(cin, tmp);
+					cout << endl;
 					autore = cerca_autore(biblioteca, tmp);
 					stampa_libri(autore);
 					break;
@@ -194,10 +195,11 @@ int main() {
 					system("CLS");
 					int i;
 					do {
-						cout << "Cosa vuoi modificare? Username (1) o Password (2) ?" << endl;
+						cout << "Cosa vuoi modificare? Username (0) o Password (1) ?" << endl;
 						cout << "Digita il numero corrispondente: ";
 						cin >> i;
-					} while (i != 1 && i != 2);
+					} while (i != 0 && i != 1);
+					cin.ignore();
 					modifica(clienti, i, username, password, cod_fiscale);
 					break;
 				case 7:
