@@ -9,3 +9,4 @@ Antonio ;Rossi;SDDFHS73;3342573648;anto_ross;anto.rossi;0
 Giovanni;Verdi;VVVV15GF53;3335629374;Verdi_verdi;Verdissimo;0
 Bill;Gates;GFLLDJ345;3457682364;Billy;Microsoft_;0
 Giovanni;Signore;SDFV3647DA;3334526781;Signore_00;IlSignore;0
+;;;;;;0
