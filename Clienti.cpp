@@ -2,6 +2,17 @@
 
 #pragma warning(disable : 4996)
 
+Clienti::Clienti()
+{
+	nome = "";
+	cognome = "";
+	codice_fiscale = "";
+	user = "";
+	password = "";
+	numero_telefono = "";
+	n_prestito = 0;
+}
+
 Clienti::Clienti(string n, string c, string cod_fisc, string us_name, string pass, string num, int num_prestito)
 {
 	nome = n;
@@ -69,12 +80,14 @@ void registrazione(vector <Clienti>& vect)
 			cout << "Codice Fiscale: ";
 			getline(cin, cod_fisc);
 			if (is_on(cod_fisc, vect)) {
-				cout << "ERRORE!" << endl << "L'utente " << n << " " << c << " ha gi� effettuato la registrazione" << endl;
+				cout << "ERRORE!" << endl << "L'utente " << n << " " << c << " ha giÃ  effettuato la registrazione" << endl;
 				exit(1);
 			}
 			else if (cod_fisc.empty())
 				cout << "Errore!\nInserire codice fiscale" << endl;
-		} while (is_on(cod_fisc, vect) || cod_fisc.empty());
+			else if (cod_fisc.size() != 21)
+				cout << "Errore!\nInserire un codice fiscale valido" << endl;
+		} while (is_on(cod_fisc, vect) || cod_fisc.empty() || cod_fisc.size() != 21);
 
 		do {
 			cout << "Numero di cellulare: ";

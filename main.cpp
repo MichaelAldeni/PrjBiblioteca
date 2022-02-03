@@ -106,11 +106,15 @@ int main() {
 						system("CLS");
 						break;
 					case 4:
+						salva_libri(biblioteca);
+						salva_clienti(clienti);
 						return 0;
 					}
 				} while (scelta_dip_cl != 3);
 				break;
 			case 5:
+				salva_libri(biblioteca);
+				salva_clienti(clienti);
 				return 0;
 			}
 		} while (scelta_dip);
@@ -173,11 +177,15 @@ int main() {
 				modifica(clienti, i, username, password, cod_fiscale);
 				break;
 			case 5:
+				salva_libri(biblioteca);
+				salva_clienti(clienti);
 				return 0;
 			}
 		}
 	}
 
+	salva_libri(biblioteca);
+	salva_clienti(clienti);
 	return 0;
 }
 

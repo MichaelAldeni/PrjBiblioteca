@@ -35,6 +35,8 @@ class Clienti {
 public:
 	///<summary>Funzioni pubbliche della classe dei Clienti</summary>
 
+	Clienti();
+
 	///<param name="Clienti">Costruttore per la classe Clienti, la inizializza</param> 
 	Clienti(string n, string c, string cod_fisc, string us_name, string pass, string num, int num_prestito);
 

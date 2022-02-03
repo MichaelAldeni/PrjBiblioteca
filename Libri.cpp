@@ -131,3 +131,14 @@ void elimina_libro(vector<Libri>& v) {
 
 	v.resize(v.capacity() - 1);
 }
+
+vector<Libri> cerca_autore(vector<Libri> v, string str){
+	vector<Libri> vect;
+	vector<Libri>::iterator it;
+	for (it = v.begin(); it != v.end(); it++) {
+		if ((*it).getAutore() == str) {
+			vect.push_back(*it);
+		}
+	}
+	return vect;
+}
