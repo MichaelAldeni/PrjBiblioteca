@@ -132,13 +132,37 @@ void elimina_libro(vector<Libri>& v) {
 	v.resize(v.capacity() - 1);
 }
 
-vector<Libri> cerca_autore(vector<Libri> v, string str){
+vector<Libri> cerca_autore(vector<Libri> v, string str)
+{
 	vector<Libri> vect;
 	vector<Libri>::iterator it;
 	for (it = v.begin(); it != v.end(); it++) {
 		if ((*it).getAutore() == str) {
 			vect.push_back(*it);
 		}
+
 	}
+	if (vect.empty())
+		cout << "Mi dispiace, la biblioteca non possiede alcun libro di " << str << endl;
 	return vect;
+
+}
+
+Libri cerca_libro(vector<Libri> v, string str)
+{
+	Libri l;
+
+	vector<Libri>::iterator it;
+	for (it = v.begin(); it != v.end(); it++) {
+		if ((*it).getNome() == str) {
+			l = *it;
+		}
+
+	}
+	if (l.getNome().empty()) {
+		cout << "Mi dispiace, il libro " << str << "non Ã¨ presente nella biblioteca" << endl;
+		exit(EXIT_FAILURE);
+	}
+	return l;
+
 }

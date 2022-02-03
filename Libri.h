@@ -93,5 +93,6 @@ public:
 	friend void stampa_libri(vector<Libri> v);
 	friend void modifica_prestito_vettore(vector<Libri>& v);
 	friend void elimina_libro(vector<Libri>& v);
+	friend Libri cerca_libro(vector<Libri> v, string str);
 	friend vector<Libri> cerca_autore(vector<Libri> v, string str);
 };

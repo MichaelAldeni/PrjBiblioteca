@@ -144,13 +144,18 @@ int main() {
 				cout << "Benvenuto/a " << username << endl;
 				cout << "***Digita l'operazione da voler effettuare:***" << endl;
 				cout << "(1) Visualizza la lista completa dei libri" << endl;
-				cout << "(2) Prendi in prestito un libro" << endl;
-				cout << "(3) Restituisci un libro" << endl;
-				cout << "(4) Modifica username o password" << endl;
-				cout << "(5) Esci" << endl << endl;
+				cout << "(2) Ricerca per libro" << endl;
+				cout << "(3) Ricerca per autore" << endl;
+				cout << "(4) Prendi in prestito un libro" << endl;
+				cout << "(5) Restituisci un libro" << endl;
+				cout << "(6) Modifica username o password" << endl;
+				cout << "(7) Esci" << endl << endl;
 				cout << "Digita il numero corrispondente: ";
 				cin >> scelta_cl;
 			} while (scelta_cl != 1 && scelta_cl != 2 && scelta_cl != 3 && scelta_cl != 4 && scelta_cl != 5);
+			string tmp;
+			Libri l;
+			vector<Libri> autore;
 			switch (scelta_cl) {
 			case 1:
 				system("CLS");
@@ -158,15 +163,31 @@ int main() {
 				break;
 			case 2:
 				system("CLS");
+				cin.ignore();
+				cout << "Inserisci il titolo del libro da cercare : ";
+				getline(cin, tmp);
+				l = cerca_libro(biblioteca, tmp);
+				cout << l;
+				break;
+			case 3:
+				system("CLS");
+				cin.ignore();
+				cout << "Inserisci il nome dell'autore da cercare: ";
+				getline(cin, tmp);
+				autore = cerca_autore(biblioteca, tmp);
+				stampa_libri(autore);
+				break;
+			case 4:
+				system("CLS");
 				modifica_prestito_vettore(biblioteca);
 				modifica_prestito_piu(clienti, cod_fiscale);
 				break;
-			case 3:
+			case 5:
 				system("CLS");
 				modifica_prestito_vettore(biblioteca);
 				modifica_prestito_meno(clienti, cod_fiscale);
 				break;
-			case 4:
+			case 6:
 				system("CLS");
 				int i;
 				do {
@@ -176,7 +197,7 @@ int main() {
 				} while (i != 1 && i != 2);
 				modifica(clienti, i, username, password, cod_fiscale);
 				break;
-			case 5:
+			case 7:
 				salva_libri(biblioteca);
 				salva_clienti(clienti);
 				return 0;
