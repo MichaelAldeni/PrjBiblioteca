@@ -54,22 +54,22 @@ public:
 	void setPrezzo(float p) { prezzo_prestito = p; };
 
 	/// <item>Funzione di restituzione dell'ID del libro.</item>
-	/// <returns>Restituisce l'ID del libro</returns>
+	/// <returns>Restituisce l'ID del libro.</returns>
 	/// <seealso cref="id"/>
 	int getID() const { return id; };
 
 	/// <item>Funzione di restituzione del nome del libro.</item>
-	/// <returns>Restituisce il nome del libro</returns>
+	/// <returns>Restituisce il nome del libro.</returns>
 	/// <seealso cref="nome"/>
 	string getNome() const { return nome; };
 
 	/// <item>Funzione di restituzione dell'autore del libro.</item>
-	/// <returns>Restituisce l'ID del libro</returns>
+	/// <returns>Restituisce l'ID del libro.</returns>
 	/// <seealso cref="autore"/>
 	string getAutore() const { return autore; };
 
 	/// <item>Funzione di restituzione del prezzo del libro.</item>
-	/// <returns>Restituisce il prezzo del libro</returns>
+	/// <returns>Restituisce il prezzo del libro.</returns>
 	/// <seealso cref="prezzo_prestito"/>
 	float getPrezzo() const { return prezzo_prestito; }
 
@@ -80,19 +80,30 @@ public:
 
 	void stampaPrestato();
 
-	/// <item>Funzione di ridefinizione dell'operatore "=". </item>
+	/// <item>Funzione di ridefinizione dell'operatore "=".</item>
 	Libri& operator=(const Libri& l);
 
-	/// <item>Funzione di ridefinizione dell'operatore "<<". </item>
+	/// <item>Funzione di ridefinizione dell'operatore "<<".</item>
 	friend ostream& operator<<(ostream& os, Libri l);
 
-	/// <item>Funzione di aggiornamento del prezzo di un determinato libri.</item>
+	/// <item>Funzione di modifica della variabile prestato.</item>
 	void modifica_prestito();
 
+	/// <item>Funzione che permette di aggiungere un libro.</item>
 	friend void aggiungi(vector<Libri> &v);
+
+	/// <item>Funzione che permette di stampare a video la lista dei libri.</item>
 	friend void stampa_libri(vector<Libri> v);
+
+	/// <item>Funzione di ricerca del libro al quale modificare il presetito.</item>
 	friend void modifica_prestito_vettore(vector<Libri>& v);
+
+	/// <item>Funzione di eliminazione di un libro.</item>
 	friend void elimina_libro(vector<Libri>& v);
+
+	/// <item>Funzione di ricerca di un determinato libro.</item>
 	friend Libri cerca_libro(vector<Libri> v, string str);
+
+	/// <item>Funzione di ricerca dell'autore di un libro.</item>
 	friend vector<Libri> cerca_autore(vector<Libri> v, string str);
 };

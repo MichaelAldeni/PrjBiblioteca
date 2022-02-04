@@ -97,8 +97,6 @@ void salva_clienti(vector<Clienti>& v)
 		ofs << (*it).getNome() << ";" << (*it).getCognome() << ";" << (*it).getCod_fiscale() <<
 			";" << (*it).getNumero() << ";" << (*it).getUser() << ";" << (*it).getPassword() << ";"
 			<< (*it).getPrestito();
-		if (it != v.end())
-			ofs << endl;
 	}
 }
 
@@ -139,5 +137,10 @@ bool login(vector<Clienti> vect, string& u, string& p, string& cf)
 
 	} while (p.empty() || !is_on(p, vect));
 
+	vector<Clienti>::iterator it;
+	for (it = vect.begin(); it != vect.end(); it++) {
+		if ((*it).getPassword() == p)
+			cf = (*it).getCod_fiscale();
+	}
 	return ceck;
 }

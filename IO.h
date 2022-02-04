@@ -8,17 +8,17 @@
 string const DIPUSER = "DIPENDENTE";
 string const DIPPASS = "DIPENDENTE123";
 
-/// <summary>Funzione di caricamento dei libri nel vettore</summary> 
+/// <item>Funzione di caricamento dei libri nel vettore.</item> 
 vector<Libri> carica_libri();
 
 void salva_libri(vector<Libri> v);
 
-//funzione che carica dal file Clienti.txt tutti gli utenti registrati
+/// <item>Funzione per il caricamento da file di tutti i clienti registrati nel sistema.</item>
 vector<Clienti> carica_clienti();
 
-//funzione che salva sul file Clienti.txt i nuovi utenti registrari
+/// <item>Funzione di salvataggio dei clienti sul file "Clienti.txt".</item>
 void salva_clienti(vector<Clienti> &v);
 
-//funzione che permettere di accedere al proprio profilo utente
+/// <item>Funzione login per i clienti all'interno del sistema.</item>
 bool login(vector<Clienti> vect, string& u, string& p, string& cf);
 
