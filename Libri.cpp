@@ -1,8 +1,3 @@
-/// <summary>File di origine della classe "Clienti"</summary> 
-/// <remarks>
-/// <list type="bullet">
-/// <item>Questo file conterrà tutto il codice riguardante l'implementazione della classe Clienti.</item> 
-/// </remarks>
 /// <seealso cref="Libri.h"/>
 #include "Libri.h"
 
@@ -165,7 +160,7 @@ Libri cerca_libro(vector<Libri> v, string str)
 
 	}
 	if (l.getNome().empty()) {
-		cout << "Mi dispiace, il libro " << str << "non Ã¨ presente nella biblioteca" << endl;
+		cout << "Mi dispiace, il libro " << str << "non e' presente nella biblioteca" << endl;
 		exit(EXIT_FAILURE);
 	}
 	return l;
