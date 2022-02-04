@@ -58,7 +58,7 @@ int main() {
 				cout << "***Digita l'operazione da voler effettuare:***" << endl << endl;
 				cout << "(1) Visualizza la lista completa dei libri" << endl;
 				cout << "(2) Aggiungi un nuovo libro" << endl;
-				cout << "(3) Elimina un libro che la biblioteca non ha più" << endl;
+				cout << "(3) Elimina un libro che la biblioteca non ha piu'" << endl;
 				cout << "(4) Menu di gestione dei clienti" << endl;
 				cout << "(5) Esci" << endl << endl;
 				cout << "Digita il numero corrispondente: ";
