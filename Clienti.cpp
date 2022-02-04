@@ -35,7 +35,7 @@ bool is_on(string str, vector<Clienti>& vect)
 	return false;
 }
 
-bool ceck_pass(string str)
+bool check_pass(string str)
 {
 	char pass[40];
 	strcpy(pass, str.c_str());
@@ -64,11 +64,10 @@ void elimina_Cliente(vector <Clienti>& vect)
 
 void registrazione(vector <Clienti>& vect)
 {
-	bool ceck = true;
 	string n, c, us_name, pass, cod_fisc, num;
 	int num_prestito = 0;
 
-	//inserimento delle generalit� del cliente
+	//inserimento delle generalita' del cliente
 		do {
 			cout << "Nome: ";
 			getline(cin, n);
@@ -92,7 +91,7 @@ void registrazione(vector <Clienti>& vect)
 				cout << "Errore!\nInserire codice fiscale" << endl;
 			else if (cod_fisc.size() != 21)
 				cout << "Errore!\nInserire un codice fiscale valido" << endl;
-		} while (is_on(cod_fisc, vect) || cod_fisc.empty() || cod_fisc.size() != 21);
+		} while (is_on(cod_fisc, vect) || cod_fisc.empty() || cod_fisc.size() != 16);
 
 		do {
 			cout << "Numero di cellulare: ";
@@ -114,10 +113,10 @@ void registrazione(vector <Clienti>& vect)
 		do {
 			cout << "Password: " << endl;
 			getline(cin, pass);
-			if(!ceck_pass(pass))
+			if(!check_pass(pass))
 				//la password deve contenere minimo 6 caratteri
 				cout << "ERRORE!\nInserire minimo 6 caratteri" << endl;
-		} while (!ceck_pass(pass));
+		} while (!check_pass(pass));
 
 	Clienti x(n, c, cod_fisc, us_name, pass, num, num_prestito);
 	//chiamata del costruttore e inserimento nel vettore
@@ -178,9 +177,7 @@ void modifica(vector<Clienti>& vect, int i, string& u, string& p, string& cf)
 		getline(cin, u);
 
 		for (it = vect.begin(); it != vect.end(); it++) {
-			cout << "entro nel ciclo" << endl;
 			if ((*it).getCod_fiscale() == cf) {
-				cout << "entro nell'if" << endl;
 				(*it).setUser(u);
 				cout << "username modificato" << endl;
 			}
@@ -213,22 +210,29 @@ void modifica(vector<Clienti>& vect, int i, string& u, string& p, string& cf)
 
 void modifica_prestito_piu(vector<Clienti>& v, string& cf) {
 	string n;
+	bool check = false;
 
 	vector<Clienti>::iterator it;
 	for (it = v.begin(); it != v.end(); ++it)
-		if ((*it).getCod_fiscale() == cf)
+		if ((*it).getCod_fiscale() == cf) {
 			(*it).setPrestito(1);
-
-		else cout << "Utente non registrato" << endl;
+			check = true;
+		}
+		if ( check == false)
+			cout << "Utente non registrato" << endl;
 }
 
 void modifica_prestito_meno(vector<Clienti>& v, string& cf) {
 	string n;
+	bool check = false;
 
 	vector<Clienti>::iterator it;
 	for (it = v.begin(); it != v.end(); ++it)
-		if ((*it).getCod_fiscale() == cf)
+		if ((*it).getCod_fiscale() == cf) {
 			(*it).setPrestito(-1);
+			check = true; 
+		}
 
-		else cout << "Utente non registrato" << endl;
+	if (check == false)
+		cout << "Utente non registrato" << endl;
 }

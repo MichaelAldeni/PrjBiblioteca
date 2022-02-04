@@ -44,7 +44,9 @@ void salva_libri(vector<Libri> v) {
 
 	vector<Libri>::iterator it = v.begin();
 	for (it = v.begin(); it != v.end(); it++) {
-		ofs << *it << endl;
+		ofs << *it;
+		if (it != v.end() - 1)
+			ofs << endl;
 	}
 }
 
@@ -97,14 +99,14 @@ void salva_clienti(vector<Clienti>& v)
 		ofs << (*it).getNome() << ";" << (*it).getCognome() << ";" << (*it).getCod_fiscale() <<
 			";" << (*it).getNumero() << ";" << (*it).getUser() << ";" << (*it).getPassword() << ";"
 			<< (*it).getPrestito();
-		if (it != v.end())
+		if (it != v.end() - 1)
 			ofs << endl;
 	}
 }
 
 bool login(vector<Clienti> vect, string& u, string& p, string& cf)
 {
-	bool ceck = false;
+	bool check = false;
 	int i = 6;
 
 	cout << "*********LOGIN*********" << endl;
@@ -130,14 +132,20 @@ bool login(vector<Clienti> vect, string& u, string& p, string& cf)
 			cout << "ERRORE!\nPassword non valida " << i << "tentativi rimasti" << endl;
 		}
 		else if (i <= 0) {
-			ceck = false;
+			check = false;
 			cout << "Login annullato" << endl;
 			exit(1);
 		}
 		else
-			ceck = true;
+			check = true;
 
 	} while (p.empty() || !is_on(p, vect));
 
-	return ceck;
+	vector<Clienti>::iterator it;
+	for (it = vect.begin(); it != vect.end(); it++) {
+		if ((*it).getPassword() == p)
+			cf = (*it).getCod_fiscale();
+	}
+
+	return check;
 }

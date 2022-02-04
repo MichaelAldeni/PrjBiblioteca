@@ -102,14 +102,19 @@ void stampa_libri(vector<Libri> v) {
 
 void modifica_prestito_vettore(vector<Libri>& v) {
 	string n;
+	bool check = false;
 
 	cout << "Inserisci il nome del libro da prestare: ";
 	getline(cin, n);
 
-	for (int i = 0; i != v.capacity(); i++)
-		if (v[i].getNome() == n)
-			v[i].modifica_prestito();
-		else cout << "Libro non presente in biblioteca" << endl;
+	vector<Libri>::iterator it;
+	for (it = v.begin(); it != v.end(); it++)
+		if ((*it).getNome() == n) {
+			(*it).modifica_prestito();
+			check = true;
+		}
+	if (check == false)
+		cout << "Libro non presente in biblioteca";
 }
 
 void elimina_libro(vector<Libri>& v) {

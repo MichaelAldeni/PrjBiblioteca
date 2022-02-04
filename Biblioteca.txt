@@ -6,8 +6,8 @@ Guerra e pace;Nikolaevic Tolstoj;12.5
 Il Processo;Franz Kafka;18.25
 Amleto;William Shakespeare;18.5
 Senza un soldo a Parigi e Londra;George Orwell;11.5
-Il barone rampante;Italo Calvino
-Romeo e Giulietta;0
+Il barone rampante;Italo Calvino;8.3
+Romeo e Giulietta;William Shakespeare;0
 Moby Dick;Herman Mleville;15.5
 Cent'anni di solitudine;Gabriel García Márquez;20
 Uno, nessuno e centomila;Luigi Pirandello;17.4
