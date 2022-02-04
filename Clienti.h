@@ -102,7 +102,7 @@ public:
 
 	friend bool is_on(string str, vector <Clienti>& vect);
 	//funzione ausiliaria, controlla se la stringa str � presente nel vettore
-	friend bool ceck_pass(string str);
+	friend bool check_pass(string str);
 	//funzione ausiliaria, controlla la validit� della password
 
 	// OVERLOAD DEGLI OPERATORI 

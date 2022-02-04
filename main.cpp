@@ -11,7 +11,9 @@
 #include "IO.h"
 using namespace std;
 
+
 int main() {
+
 	vector<Libri> biblioteca;
 	vector<Clienti> clienti;
 
@@ -169,25 +171,28 @@ int main() {
 					cin.ignore();
 					cout << "Inserisci il titolo del libro da cercare : ";
 					getline(cin, tmp);
+					cout << endl;
 					l = cerca_libro(biblioteca, tmp);
-					cout << l;
+					cout << l << endl;
 					break;
 				case 3:
 					system("CLS");
 					cin.ignore();
 					cout << "Inserisci il nome dell'autore da cercare: ";
 					getline(cin, tmp);
-					cout << endl;
 					autore = cerca_autore(biblioteca, tmp);
 					stampa_libri(autore);
+					cout << endl;
 					break;
 				case 4:
 					system("CLS");
+					cin.ignore();
 					modifica_prestito_vettore(biblioteca);
 					modifica_prestito_piu(clienti, cod_fiscale);
 					break;
 				case 5:
 					system("CLS");
+					cin.ignore();
 					modifica_prestito_vettore(biblioteca);
 					modifica_prestito_meno(clienti, cod_fiscale);
 					break;
