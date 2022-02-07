@@ -33,88 +33,85 @@ class Clienti {
 	int n_prestito;
 
 public:
+	///<summary>Funzioni pubbliche della classe dei Clienti</summary>
 
-	/// <item>Costruttore per la classe Clienti.</item>
 	Clienti();
 
-	/// <item>Costruttore per la classe Clienti, la inizializza.</item>  
+	///<param name="Clienti">Costruttore per la classe Clienti, la inizializza</param> 
 	Clienti(string n, string c, string cod_fisc, string us_name, string pass, string num, int num_prestito);
 
-	/// <item>Funzione di assegnazione del nome.</item>
+	///<param name="setNome">Funzione di assegnazione del nome</param>
 	void setNome(string n) { nome = n; }
 
-	/// <item>Funzione di assegnazione per il cognome.</item>
+	///<param name="setCognome">Funzione di assegnazione per il cognome</param>
 	void setCognome(string c) { cognome = c; }
 
-	/// <item>Funzione di assegnazione per il nome utente scelto dal cliente.</item>
+	///<param name="setUser">Funzione di assegnazione per il nome utente scelto dal cliente</param>
 	void setUser(string us) { user = us; }
 
-	/// <item>Funzione di assegnazione della password scelta dal cliente.</item>
+	///<param name="setPassword">Funzione di assegnazione della password scelta dal cliente</param>
 	void setPassword(string pass) { password = pass; }
 
-	/// <item>Funzione di assegnazione codice fiscale del cliente.</item>
+	///<param name="setCod_fiscale">Funzione di assegnazione codice fiscale del cliente</param>
 	void setCod_fiscale(string cod) { codice_fiscale = cod; }
 
-	/// <item>Funzione di assegnazione del numero di telefono del cliente.</item>
+	///<param name="setNumero">Funzione di assegnazione del numero di telefono del cliente</param>
 	void setNumero(string num) { numero_telefono = num; }
 
-	/// <item>Funzione di assegnazione del numero di libri presi in prestito al cliente.</item>
+	///<param name="setPrestito">Funzione di assegnazione del numero di libri presi in prestito al cliente</param>
 	void setPrestito(int p) { n_prestito += p; }
 
-	/// <item>Funzione di restituzione del nome del cliente.</item>
-	///<returns>Restituisce il nome del cliente</returns>
+	///<param name="getNome">Funzione di restituzione del nome del cliente</param>
 	string getNome()const { return nome; }
-	
+	///<returns>Restituisce il nome del cliente</returns>
 
-	/// <item>Funzione di restituzuione del cognome del cliente.</item>
-	///<returns>Restituisce il cognome del cliente</returns>
+	///<param name="getCognome">Funzione di restituzuione del cognome del cliente</param>
 	string getCognome()const { return cognome; }
-	
+	///<returns>Restituisce il cognome del cliente</returns>
 
-	/// <item>Funzione di restituzuione del nome utetnte del cliente.</item>
-	///<returns>Restituisce il nome utente del cliente</returns>
+	///<param name="getUser">Funzione di restituzuione del nome utetnte del cliente</param>
 	string getUser()const { return user; }
 
-	/// <item>Funzione di restituzuione della password del cliente, costante in modo da non essre modificata.</item>
-	/// <returns>Restituisce la password del cliente.</returns>
+	///<param name="getPassword">Funzione di restituzuione della password del cliente, costante in modo da non essre modificata</param>
 	string getPassword()const { return password; }
+	///<returns>Restituisce la password del cliente</returns>
 
-	/// <item>Funzione di restituzuione della codice fiscale del cliente.</item>
-	/// <returns>Restituisce il codice fiscale del cliente.</returns>
+	///<param name="getCod_fiscale">Funzione di restituzuione della codice fiscale del cliente</param>
 	string getCod_fiscale()const { return codice_fiscale; }
+	///<returns>Restituisce il codice fiscale del cliente</returns>
 
-	/// <item>Funzione di restituzuione della numero del cliente.</item>
-	/// <returns>Restituisce il numero di telefono del cliente.</returns>
+	///<param name="getNumero">Funzione di restituzuione della numero del cliente</param>
 	string getNumero()const { return numero_telefono; }
-	
+	///<returns>Restituisce il numero di telefono del cliente</returns>
 
-	/// <item>Funzione di restituzuione della numero di libri prestati al cliente.</item>
-	/// <returns>Restituisce il numero di libri prestati al cliente.</returns>
+	///<param name="getPrestito">Funzione di restituzuione della numero di libri prestati al cliente</param>
 	int getPrestito()const { return n_prestito; }
+	///<returns>Restituisce il numero di libri prestati al cliente</returns>
 
-	/// <item>Funzione che permette di effettuare la registrazione di un nuovo cliente, i dati dei clienti sono memorizzati in un vettore.</item>
 	friend void registrazione(vector <Clienti>& vect);
-	/// <item>Funzione che permette di eliminare un cliente dal vettore.</item>
+	//funzione che permette di effettuare la registrazione di un nuovo cliente, i dati dei clienti sono memorizzati in un vettore
 	friend void elimina_Cliente(vector <Clienti>& vect);
-	/// <item>Stampa delle informazione di tutti i clienti registrati.</item>
+	//funzione che permette di eliminare un cliente dal vettore
 	friend void stampa_vettore(vector <Clienti>& vect);
-	/// <item>Stampa delle informazioni di un determinato cliente.</item>
+	//stampa delle informazione di tutti i clienti registrati 
 	friend void stampa_Cliente(string user, vector <Clienti>& vect);
-	/// <item>Stampa delle informazioni di un determinato cliente.</item>
+	//stampa delle informazioni di un determinato cliente
+
 	friend void modifica_pass(vector<Clienti> vect, bool log);
 
-	/// <item>Funzione ausiliaria, controlla se la stringa str e' presente nel vettore.</item>
-	friend bool is_on(string str, vector <Clienti>& vect);
-	/// <item>Funzione ausiliaria, controlla la validita della password.</item>
-	friend bool check_pass(string str);
 
-	/// <item>OVERLOAD DELL'OPERATORE "<<"</item>
+	friend bool is_on(string str, vector <Clienti>& vect);
+	//funzione ausiliaria, controlla se la stringa str � presente nel vettore
+	friend bool check_pass(string str);
+	//funzione ausiliaria, controlla la validit� della password
+
+	// OVERLOAD DEGLI OPERATORI 
 	friend ostream &operator<<(ostream &os, Clienti x);
-	/// <item>Funzione che permette di modificare username o password, la variabile i permette di scegliere cosa modificare.</item>
+
 	friend void modifica(vector<Clienti>& vect, int i, string& u, string& p, string& cf);
-	/// <item>Funzione che permette di incrementare il contatore dei libri prestati di un determinato cliente.</item>
+	
 	friend void modifica_prestito_piu(vector<Clienti>& v, string& cf);
-	/// <item>Funzione che permette di diminuire, il contatore dei libri prestati di un determinato cliente.</item>
+
 	friend void modifica_prestito_meno(vector<Clienti>& v, string& cf);
 
 };
