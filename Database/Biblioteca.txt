@@ -1,0 +1,20 @@
+Il nome della rosa;Umberto Eco;15.5
+Il codice da Vinci;Dan Brown;17.3
+Il grande Gatsby;Francis Scott Fitzgerald;16
+Come viaggiare con un salmone;Umberto Eco;22.3
+Guerra e pace;Nikolaevic Tolstoj;12.5
+Il Processo;Franz Kafka;18.25
+Amleto;William Shakespeare;18.5
+Senza un soldo a Parigi e Londra;George Orwell;11.5
+Il barone rampante;Italo Calvino;8.3
+Romeo e Giulietta;William Shakespeare;0
+Moby Dick;Herman Mleville;15.5
+Cent'anni di solitudine;Gabriel García Márquez;20
+Uno, nessuno e centomila;Luigi Pirandello;17.4
+La fattoria degli animali;George Orwell;14
+Il fu Mattia Pascal;Luigi Pirandello;18.3
+Il Profumo;Patrick Suskind;8
+1984;George Orwell;12.3
+Il Conte di Montecristo;Alexandre Dumas;20
+Otello;William Shakespeare;10.5
+Novelle per un anno;Luigi Pirandello;8.5
