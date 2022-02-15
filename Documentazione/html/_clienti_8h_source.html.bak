@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Libreria 2.0:  File sorgente C:/Users/Administrator/Desktop/File su cui lavorare/PrjBiblioteca/Clienti.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Libreria 2.0
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Cerca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_18584afdb5b28ffd280a76c604916332.html">PrjBiblioteca</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Clienti.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_clienti_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_biblioteca_8h.html">Biblioteca.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_clienti.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_clienti.html">Clienti</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_clienti.html#aeb285440415b592dd6b7ecf3f2b6da85">   15</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_clienti.html#aeb285440415b592dd6b7ecf3f2b6da85">nome</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_clienti.html#ae6b5eed66566a6f0867206b43725aab3">   18</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_clienti.html#ae6b5eed66566a6f0867206b43725aab3">cognome</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_clienti.html#a0ec768f1c3cc06b5769b25eecc2c39df">   21</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_clienti.html#a0ec768f1c3cc06b5769b25eecc2c39df">user</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_clienti.html#af979e31019f27dd04e1947477f545718">   24</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_clienti.html#af979e31019f27dd04e1947477f545718">password</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_clienti.html#a8b9328b4fb518b515e3b57342390b014">   27</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_clienti.html#a8b9328b4fb518b515e3b57342390b014">codice_fiscale</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_clienti.html#aca404e68f63bef627cc386f25fd95199">   30</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_clienti.html#aca404e68f63bef627cc386f25fd95199">numero_telefono</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_clienti.html#a493402858faea6758a714ab12b0ac343">   33</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_clienti.html#a493402858faea6758a714ab12b0ac343">n_prestito</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="class_clienti.html#ac994bde2df35f83d286183231ba7c287">Clienti</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_function" href="class_clienti.html#ac994bde2df35f83d286183231ba7c287">Clienti</a>(<span class="keywordtype">string</span> n, <span class="keywordtype">string</span> c, <span class="keywordtype">string</span> cod_fisc, <span class="keywordtype">string</span> us_name, <span class="keywordtype">string</span> pass, <span class="keywordtype">string</span> num, <span class="keywordtype">int</span> num_prestito);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_clienti.html#a8db175a4cf893edad7b954564cadc7f2">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clienti.html#a8db175a4cf893edad7b954564cadc7f2">setNome</a>(<span class="keywordtype">string</span> n) { <a class="code hl_variable" href="class_clienti.html#aeb285440415b592dd6b7ecf3f2b6da85">nome</a> = n; }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_clienti.html#aa340ff9ea289ea653ff75a7aebebab1a">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clienti.html#aa340ff9ea289ea653ff75a7aebebab1a">setCognome</a>(<span class="keywordtype">string</span> c) { <a class="code hl_variable" href="class_clienti.html#ae6b5eed66566a6f0867206b43725aab3">cognome</a> = c; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_clienti.html#a63ea3f3cb9615257caf67c1728af8737">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clienti.html#a63ea3f3cb9615257caf67c1728af8737">setUser</a>(<span class="keywordtype">string</span> us) { <a class="code hl_variable" href="class_clienti.html#a0ec768f1c3cc06b5769b25eecc2c39df">user</a> = us; }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_clienti.html#a594daec7da7b9c378923205c52ce2fd3">   53</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clienti.html#a594daec7da7b9c378923205c52ce2fd3">setPassword</a>(<span class="keywordtype">string</span> pass) { <a class="code hl_variable" href="class_clienti.html#af979e31019f27dd04e1947477f545718">password</a> = pass; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_clienti.html#a89290c0e7eb46194ccde3c95a891aa23">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clienti.html#a89290c0e7eb46194ccde3c95a891aa23">setCod_fiscale</a>(<span class="keywordtype">string</span> cod) { <a class="code hl_variable" href="class_clienti.html#a8b9328b4fb518b515e3b57342390b014">codice_fiscale</a> = cod; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_clienti.html#a9ff6bfb5c9b0e848aa594edc61758a8d">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clienti.html#a9ff6bfb5c9b0e848aa594edc61758a8d">setNumero</a>(<span class="keywordtype">string</span> num) { <a class="code hl_variable" href="class_clienti.html#aca404e68f63bef627cc386f25fd95199">numero_telefono</a> = num; }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_clienti.html#a7d0a90d13b05188ae21236cf33f4ea72">   62</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_clienti.html#a7d0a90d13b05188ae21236cf33f4ea72">setPrestito</a>(<span class="keywordtype">int</span> p) { <a class="code hl_variable" href="class_clienti.html#a493402858faea6758a714ab12b0ac343">n_prestito</a> += p; }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_clienti.html#a76fb05d2da8312816235d699c4a74937">   66</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_clienti.html#a76fb05d2da8312816235d699c4a74937">getNome</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clienti.html#aeb285440415b592dd6b7ecf3f2b6da85">nome</a>; }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_clienti.html#a8fa7c5a9bce1918a564d02ff7e9e6f3c">   71</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_clienti.html#a8fa7c5a9bce1918a564d02ff7e9e6f3c">getCognome</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clienti.html#ae6b5eed66566a6f0867206b43725aab3">cognome</a>; }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_clienti.html#a83fe20cd51ed76d514a75857dc5926cc">   76</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_clienti.html#a83fe20cd51ed76d514a75857dc5926cc">getUser</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clienti.html#a0ec768f1c3cc06b5769b25eecc2c39df">user</a>; }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_clienti.html#aef6d883f00e00931dcad3624185d403b">   80</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_clienti.html#aef6d883f00e00931dcad3624185d403b">getPassword</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clienti.html#af979e31019f27dd04e1947477f545718">password</a>; }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_clienti.html#ab434a9f0f93da7718bbaa8a6cf4b799f">   84</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_clienti.html#ab434a9f0f93da7718bbaa8a6cf4b799f">getCod_fiscale</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clienti.html#a8b9328b4fb518b515e3b57342390b014">codice_fiscale</a>; }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_clienti.html#a226a89764a65f7cec8171ecf68c0a15a">   88</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_clienti.html#a226a89764a65f7cec8171ecf68c0a15a">getNumero</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clienti.html#aca404e68f63bef627cc386f25fd95199">numero_telefono</a>; }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_clienti.html#ade60f22a2fa65b2a03b06ac67191b950">   93</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_clienti.html#ade60f22a2fa65b2a03b06ac67191b950">getPrestito</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_clienti.html#a493402858faea6758a714ab12b0ac343">n_prestito</a>; }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_clienti.html#ab0e612d35a83a15a8e8101b05165b23c">registrazione</a>(vector &lt;Clienti&gt;&amp; vect);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_clienti.html#a5847f01364a398a8ec02399985085726">elimina_Cliente</a>(vector &lt;Clienti&gt;&amp; vect);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_clienti.html#a572cd88ce5aecd43ec057b2e62ef5995">stampa_vettore</a>(vector &lt;Clienti&gt;&amp; vect);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_clienti.html#a1141bc1c4fcab202fe8ee07488d94e0b">stampa_Cliente</a>(<span class="keywordtype">string</span> <a class="code hl_variable" href="class_clienti.html#a0ec768f1c3cc06b5769b25eecc2c39df">user</a>, vector &lt;Clienti&gt;&amp; vect);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_clienti.html#a23e6665abc8ed4385e69ea21cd15593e">is_on</a>(<span class="keywordtype">string</span> str, vector &lt;Clienti&gt;&amp; vect);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_clienti.html#a7b2a2575f603be5e92f3f1d61a6a5a6d">check_pass</a>(<span class="keywordtype">string</span> str);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">friend</span> ostream &amp;<a class="code hl_friend" href="class_clienti.html#acb7521c60a9315dc82e0f7912cde5a59">operator&lt;&lt;</a>(ostream &amp;os, <a class="code hl_class" href="class_clienti.html">Clienti</a> x);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_clienti.html#ad59a6af8bdd17d4b9e3a72d0cebe7b4b">modifica</a>(vector&lt;Clienti&gt;&amp; vect, <span class="keywordtype">int</span> i, <span class="keywordtype">string</span>&amp; u, <span class="keywordtype">string</span>&amp; p, <span class="keywordtype">string</span>&amp; cf);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_clienti.html#acfaa3e4e7c7f0e7e4d8ec4ea94bd8567">modifica_prestito_piu</a>(vector&lt;Clienti&gt;&amp; v, <span class="keywordtype">string</span>&amp; cf);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_clienti.html#aae5508af6a3aad60be2ac84ad6f7873a">modifica_prestito_meno</a>(vector&lt;Clienti&gt;&amp; v, <span class="keywordtype">string</span>&amp; cf);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>};</div>
+<div class="ttc" id="a_biblioteca_8h_html"><div class="ttname"><a href="_biblioteca_8h.html">Biblioteca.h</a></div></div>
+<div class="ttc" id="aclass_clienti_html"><div class="ttname"><a href="class_clienti.html">Clienti</a></div><div class="ttdef"><b>Definition:</b> Clienti.h:6</div></div>
+<div class="ttc" id="aclass_clienti_html_a0ec768f1c3cc06b5769b25eecc2c39df"><div class="ttname"><a href="class_clienti.html#a0ec768f1c3cc06b5769b25eecc2c39df">Clienti::user</a></div><div class="ttdeci">string user</div><div class="ttdoc">Variabile che gestisce la credenziale di accesso per il login nel programma dell'utente</div><div class="ttdef"><b>Definition:</b> Clienti.h:21</div></div>
+<div class="ttc" id="aclass_clienti_html_a1141bc1c4fcab202fe8ee07488d94e0b"><div class="ttname"><a href="class_clienti.html#a1141bc1c4fcab202fe8ee07488d94e0b">Clienti::stampa_Cliente</a></div><div class="ttdeci">friend void stampa_Cliente(string user, vector&lt; Clienti &gt; &amp;vect)</div><div class="ttdoc">Stampa delle informazioni di un determinato cliente.</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:150</div></div>
+<div class="ttc" id="aclass_clienti_html_a226a89764a65f7cec8171ecf68c0a15a"><div class="ttname"><a href="class_clienti.html#a226a89764a65f7cec8171ecf68c0a15a">Clienti::getNumero</a></div><div class="ttdeci">string getNumero() const</div><div class="ttdef"><b>Definition:</b> Clienti.h:88</div></div>
+<div class="ttc" id="aclass_clienti_html_a23e6665abc8ed4385e69ea21cd15593e"><div class="ttname"><a href="class_clienti.html#a23e6665abc8ed4385e69ea21cd15593e">Clienti::is_on</a></div><div class="ttdeci">friend bool is_on(string str, vector&lt; Clienti &gt; &amp;vect)</div><div class="ttdoc">Funzione ausiliaria, controlla se la stringa str e' presente nel vettore.</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:28</div></div>
+<div class="ttc" id="aclass_clienti_html_a493402858faea6758a714ab12b0ac343"><div class="ttname"><a href="class_clienti.html#a493402858faea6758a714ab12b0ac343">Clienti::n_prestito</a></div><div class="ttdeci">int n_prestito</div><div class="ttdoc">Variabile riguardante la gestione dei libri in prestito per ogni cliente</div><div class="ttdef"><b>Definition:</b> Clienti.h:33</div></div>
+<div class="ttc" id="aclass_clienti_html_a572cd88ce5aecd43ec057b2e62ef5995"><div class="ttname"><a href="class_clienti.html#a572cd88ce5aecd43ec057b2e62ef5995">Clienti::stampa_vettore</a></div><div class="ttdeci">friend void stampa_vettore(vector&lt; Clienti &gt; &amp;vect)</div><div class="ttdoc">Stampa delle informazione di tutti i clienti registrati.</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:140</div></div>
+<div class="ttc" id="aclass_clienti_html_a5847f01364a398a8ec02399985085726"><div class="ttname"><a href="class_clienti.html#a5847f01364a398a8ec02399985085726">Clienti::elimina_Cliente</a></div><div class="ttdeci">friend void elimina_Cliente(vector&lt; Clienti &gt; &amp;vect)</div><div class="ttdoc">Funzione che permette di eliminare un cliente dal vettore.</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:47</div></div>
+<div class="ttc" id="aclass_clienti_html_a594daec7da7b9c378923205c52ce2fd3"><div class="ttname"><a href="class_clienti.html#a594daec7da7b9c378923205c52ce2fd3">Clienti::setPassword</a></div><div class="ttdeci">void setPassword(string pass)</div><div class="ttdoc">Funzione di assegnazione della password scelta dal cliente.</div><div class="ttdef"><b>Definition:</b> Clienti.h:53</div></div>
+<div class="ttc" id="aclass_clienti_html_a63ea3f3cb9615257caf67c1728af8737"><div class="ttname"><a href="class_clienti.html#a63ea3f3cb9615257caf67c1728af8737">Clienti::setUser</a></div><div class="ttdeci">void setUser(string us)</div><div class="ttdoc">Funzione di assegnazione per il nome utente scelto dal cliente.</div><div class="ttdef"><b>Definition:</b> Clienti.h:50</div></div>
+<div class="ttc" id="aclass_clienti_html_a76fb05d2da8312816235d699c4a74937"><div class="ttname"><a href="class_clienti.html#a76fb05d2da8312816235d699c4a74937">Clienti::getNome</a></div><div class="ttdeci">string getNome() const</div><div class="ttdef"><b>Definition:</b> Clienti.h:66</div></div>
+<div class="ttc" id="aclass_clienti_html_a7b2a2575f603be5e92f3f1d61a6a5a6d"><div class="ttname"><a href="class_clienti.html#a7b2a2575f603be5e92f3f1d61a6a5a6d">Clienti::check_pass</a></div><div class="ttdeci">friend bool check_pass(string str)</div><div class="ttdoc">Funzione ausiliaria, controlla la validita della password.</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:38</div></div>
+<div class="ttc" id="aclass_clienti_html_a7d0a90d13b05188ae21236cf33f4ea72"><div class="ttname"><a href="class_clienti.html#a7d0a90d13b05188ae21236cf33f4ea72">Clienti::setPrestito</a></div><div class="ttdeci">void setPrestito(int p)</div><div class="ttdoc">Funzione di assegnazione del numero di libri presi in prestito al cliente.</div><div class="ttdef"><b>Definition:</b> Clienti.h:62</div></div>
+<div class="ttc" id="aclass_clienti_html_a83fe20cd51ed76d514a75857dc5926cc"><div class="ttname"><a href="class_clienti.html#a83fe20cd51ed76d514a75857dc5926cc">Clienti::getUser</a></div><div class="ttdeci">string getUser() const</div><div class="ttdef"><b>Definition:</b> Clienti.h:76</div></div>
+<div class="ttc" id="aclass_clienti_html_a89290c0e7eb46194ccde3c95a891aa23"><div class="ttname"><a href="class_clienti.html#a89290c0e7eb46194ccde3c95a891aa23">Clienti::setCod_fiscale</a></div><div class="ttdeci">void setCod_fiscale(string cod)</div><div class="ttdoc">Funzione di assegnazione codice fiscale del cliente.</div><div class="ttdef"><b>Definition:</b> Clienti.h:56</div></div>
+<div class="ttc" id="aclass_clienti_html_a8b9328b4fb518b515e3b57342390b014"><div class="ttname"><a href="class_clienti.html#a8b9328b4fb518b515e3b57342390b014">Clienti::codice_fiscale</a></div><div class="ttdeci">string codice_fiscale</div><div class="ttdoc">Codice fiscale, utilizzato per identificare il cliente</div><div class="ttdef"><b>Definition:</b> Clienti.h:27</div></div>
+<div class="ttc" id="aclass_clienti_html_a8db175a4cf893edad7b954564cadc7f2"><div class="ttname"><a href="class_clienti.html#a8db175a4cf893edad7b954564cadc7f2">Clienti::setNome</a></div><div class="ttdeci">void setNome(string n)</div><div class="ttdoc">Funzione di assegnazione del nome.</div><div class="ttdef"><b>Definition:</b> Clienti.h:44</div></div>
+<div class="ttc" id="aclass_clienti_html_a8fa7c5a9bce1918a564d02ff7e9e6f3c"><div class="ttname"><a href="class_clienti.html#a8fa7c5a9bce1918a564d02ff7e9e6f3c">Clienti::getCognome</a></div><div class="ttdeci">string getCognome() const</div><div class="ttdef"><b>Definition:</b> Clienti.h:71</div></div>
+<div class="ttc" id="aclass_clienti_html_a9ff6bfb5c9b0e848aa594edc61758a8d"><div class="ttname"><a href="class_clienti.html#a9ff6bfb5c9b0e848aa594edc61758a8d">Clienti::setNumero</a></div><div class="ttdeci">void setNumero(string num)</div><div class="ttdoc">Funzione di assegnazione del numero di telefono del cliente.</div><div class="ttdef"><b>Definition:</b> Clienti.h:59</div></div>
+<div class="ttc" id="aclass_clienti_html_aa340ff9ea289ea653ff75a7aebebab1a"><div class="ttname"><a href="class_clienti.html#aa340ff9ea289ea653ff75a7aebebab1a">Clienti::setCognome</a></div><div class="ttdeci">void setCognome(string c)</div><div class="ttdoc">Funzione di assegnazione per il cognome.</div><div class="ttdef"><b>Definition:</b> Clienti.h:47</div></div>
+<div class="ttc" id="aclass_clienti_html_aae5508af6a3aad60be2ac84ad6f7873a"><div class="ttname"><a href="class_clienti.html#aae5508af6a3aad60be2ac84ad6f7873a">Clienti::modifica_prestito_meno</a></div><div class="ttdeci">friend void modifica_prestito_meno(vector&lt; Clienti &gt; &amp;v, string &amp;cf)</div><div class="ttdoc">Funzione che permette di diminuire, il contatore dei libri prestati di un determinato cliente.</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:231</div></div>
+<div class="ttc" id="aclass_clienti_html_ab0e612d35a83a15a8e8101b05165b23c"><div class="ttname"><a href="class_clienti.html#ab0e612d35a83a15a8e8101b05165b23c">Clienti::registrazione</a></div><div class="ttdeci">friend void registrazione(vector&lt; Clienti &gt; &amp;vect)</div><div class="ttdoc">Funzione che permette di effettuare la registrazione di un nuovo cliente, i dati dei clienti sono mem...</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:68</div></div>
+<div class="ttc" id="aclass_clienti_html_ab434a9f0f93da7718bbaa8a6cf4b799f"><div class="ttname"><a href="class_clienti.html#ab434a9f0f93da7718bbaa8a6cf4b799f">Clienti::getCod_fiscale</a></div><div class="ttdeci">string getCod_fiscale() const</div><div class="ttdef"><b>Definition:</b> Clienti.h:84</div></div>
+<div class="ttc" id="aclass_clienti_html_ac994bde2df35f83d286183231ba7c287"><div class="ttname"><a href="class_clienti.html#ac994bde2df35f83d286183231ba7c287">Clienti::Clienti</a></div><div class="ttdeci">Clienti()</div><div class="ttdoc">Costruttore per la classe Clienti.</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:5</div></div>
+<div class="ttc" id="aclass_clienti_html_aca404e68f63bef627cc386f25fd95199"><div class="ttname"><a href="class_clienti.html#aca404e68f63bef627cc386f25fd95199">Clienti::numero_telefono</a></div><div class="ttdeci">string numero_telefono</div><div class="ttdoc">Variabile che gestisce i numeri di telefono dei vari clienti, 1 per ogni cliente</div><div class="ttdef"><b>Definition:</b> Clienti.h:30</div></div>
+<div class="ttc" id="aclass_clienti_html_acb7521c60a9315dc82e0f7912cde5a59"><div class="ttname"><a href="class_clienti.html#acb7521c60a9315dc82e0f7912cde5a59">Clienti::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, Clienti x)</div><div class="ttdoc">OVERLOAD DELL'OPERATORE &quot;&lt;&lt;&quot;</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:131</div></div>
+<div class="ttc" id="aclass_clienti_html_acfaa3e4e7c7f0e7e4d8ec4ea94bd8567"><div class="ttname"><a href="class_clienti.html#acfaa3e4e7c7f0e7e4d8ec4ea94bd8567">Clienti::modifica_prestito_piu</a></div><div class="ttdeci">friend void modifica_prestito_piu(vector&lt; Clienti &gt; &amp;v, string &amp;cf)</div><div class="ttdoc">Funzione che permette di incrementare il contatore dei libri prestati di un determinato cliente.</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:214</div></div>
+<div class="ttc" id="aclass_clienti_html_ad59a6af8bdd17d4b9e3a72d0cebe7b4b"><div class="ttname"><a href="class_clienti.html#ad59a6af8bdd17d4b9e3a72d0cebe7b4b">Clienti::modifica</a></div><div class="ttdeci">friend void modifica(vector&lt; Clienti &gt; &amp;vect, int i, string &amp;u, string &amp;p, string &amp;cf)</div><div class="ttdoc">Funzione che permette di modificare username o password, la variabile i permette di scegliere cosa mo...</div><div class="ttdef"><b>Definition:</b> Clienti.cpp:161</div></div>
+<div class="ttc" id="aclass_clienti_html_ade60f22a2fa65b2a03b06ac67191b950"><div class="ttname"><a href="class_clienti.html#ade60f22a2fa65b2a03b06ac67191b950">Clienti::getPrestito</a></div><div class="ttdeci">int getPrestito() const</div><div class="ttdef"><b>Definition:</b> Clienti.h:93</div></div>
+<div class="ttc" id="aclass_clienti_html_ae6b5eed66566a6f0867206b43725aab3"><div class="ttname"><a href="class_clienti.html#ae6b5eed66566a6f0867206b43725aab3">Clienti::cognome</a></div><div class="ttdeci">string cognome</div><div class="ttdoc">Stringa per gestire il cognome dell'utente</div><div class="ttdef"><b>Definition:</b> Clienti.h:18</div></div>
+<div class="ttc" id="aclass_clienti_html_aeb285440415b592dd6b7ecf3f2b6da85"><div class="ttname"><a href="class_clienti.html#aeb285440415b592dd6b7ecf3f2b6da85">Clienti::nome</a></div><div class="ttdeci">string nome</div><div class="ttdoc">Classe clienti</div><div class="ttdef"><b>Definition:</b> Clienti.h:15</div></div>
+<div class="ttc" id="aclass_clienti_html_aef6d883f00e00931dcad3624185d403b"><div class="ttname"><a href="class_clienti.html#aef6d883f00e00931dcad3624185d403b">Clienti::getPassword</a></div><div class="ttdeci">string getPassword() const</div><div class="ttdef"><b>Definition:</b> Clienti.h:80</div></div>
+<div class="ttc" id="aclass_clienti_html_af979e31019f27dd04e1947477f545718"><div class="ttname"><a href="class_clienti.html#af979e31019f27dd04e1947477f545718">Clienti::password</a></div><div class="ttdeci">string password</div><div class="ttdoc">Password utilizzata per il login nel programma da parte dell'utente</div><div class="ttdef"><b>Definition:</b> Clienti.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
