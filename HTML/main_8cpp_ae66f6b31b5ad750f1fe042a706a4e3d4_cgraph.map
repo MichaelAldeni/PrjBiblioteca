@@ -1,0 +1,21 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,411,56,437"/>
+<area shape="rect" id="node2" href="$_libri_8cpp.html#a89ef6b0a4e0c1bdf0974a8b56acede2c" title=" " alt="" coords="151,5,222,32"/>
+<area shape="rect" id="node3" href="$_i_o_8cpp.html#a7bddfdbda17e7e9c75f9298de6eca311" title="Funzione per il caricamento da file di tutti i clienti registrati nel sistema." alt="" coords="137,56,236,83"/>
+<area shape="rect" id="node4" href="$_i_o_8cpp.html#af617d7c4d032db5da84f323750769b9a" title="Funzione di caricamento dei libri nel vettore." alt="" coords="145,107,229,133"/>
+<area shape="rect" id="node5" href="$_libri_8cpp.html#a1973f57f95c753d8fd7af298532b64d9" title=" " alt="" coords="138,157,235,184"/>
+<area shape="rect" id="node6" href="$_libri_8cpp.html#ad47cb9f2b6a9c2848f9a3f06864a3d25" title=" " alt="" coords="144,208,229,235"/>
+<area shape="rect" id="node7" href="$_clienti_8cpp.html#a5847f01364a398a8ec02399985085726" title=" " alt="" coords="131,259,242,285"/>
+<area shape="rect" id="node8" href="$_libri_8cpp.html#a3bec6eda896561b6db15d8616681eca5" title=" " alt="" coords="139,309,234,336"/>
+<area shape="rect" id="node9" href="$_i_o_8cpp.html#ac87e95ed435cd69975e54c5ffddd146b" title="Funzione login per i clienti all&#39;interno del sistema." alt="" coords="162,360,211,387"/>
+<area shape="rect" id="node11" href="$_clienti_8cpp.html#ad59a6af8bdd17d4b9e3a72d0cebe7b4b" title=" " alt="" coords="151,411,222,437"/>
+<area shape="rect" id="node12" href="$_clienti_8cpp.html#aae5508af6a3aad60be2ac84ad6f7873a" title=" " alt="" coords="107,461,266,488"/>
+<area shape="rect" id="node13" href="$_clienti_8cpp.html#acfaa3e4e7c7f0e7e4d8ec4ea94bd8567" title=" " alt="" coords="115,512,259,539"/>
+<area shape="rect" id="node14" href="$_libri_8cpp.html#ab89b7198a1c5f1d4753627379acb3e6f" title=" " alt="" coords="104,563,269,589"/>
+<area shape="rect" id="node15" href="$_clienti_8cpp.html#ab0e612d35a83a15a8e8101b05165b23c" title=" " alt="" coords="139,613,235,640"/>
+<area shape="rect" id="node16" href="$_i_o_8cpp.html#aa4a30249e3cc5f09702a30a2e5820c6f" title="Funzione di salvataggio dei clienti sul file &quot;Clienti.txt&quot;." alt="" coords="141,664,233,691"/>
+<area shape="rect" id="node17" href="$_i_o_8cpp.html#a73a3fd6ec039ac489b98dbd6abb6ac59" title="Funzione che integra le modifiche effettuate nel database del programma." alt="" coords="147,715,226,741"/>
+<area shape="rect" id="node18" href="$_libri_8cpp.html#ab0a26fb1fc64ef530d6d01eea0fe9f68" title=" " alt="" coords="141,765,233,792"/>
+<area shape="rect" id="node19" href="$_clienti_8cpp.html#a572cd88ce5aecd43ec057b2e62ef5995" title=" " alt="" coords="131,816,242,843"/>
+<area shape="rect" id="node10" href="$_clienti_8cpp.html#a23e6665abc8ed4385e69ea21cd15593e" title=" " alt="" coords="317,360,371,387"/>
+</map>
