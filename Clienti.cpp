@@ -44,21 +44,24 @@ bool check_pass(string str)
 	return true;
 }
 
-void elimina_Cliente(vector <Clienti>& vect)
-{
+void elimina_Cliente(vector <Clienti>& vect){
 	string cod;
 	int i, j;
 	vector<Clienti>::iterator it;
-
+	bool check = false;
 	cout << "Inserire il codice fiscale del cliente del quale si vuole annullare la registrazione: ";
 	getline(cin, cod);
 
 	for (it = vect.begin(); it != vect.end(); it++)
 		if ((*it).getCod_fiscale() == cod) {
 			vect.erase(it);
+			check = true;
 			break;
 		}
-
+	if (check)
+		cout << "Registrazione annullata" << endl << endl;
+	else
+		cout << "Utente non trovato" << endl << endl;
 	return;
 }
 
@@ -218,8 +221,11 @@ void modifica_prestito_piu(vector<Clienti>& v, string& cf) {
 			(*it).setPrestito(1);
 			check = true;
 		}
-		if ( check == false)
-			cout << "Utente non registrato" << endl;
+	if (check == false) {
+		cout << "Utente non registrato" << endl;
+	}else {
+		cout << "L'operazione e' stata svolta correttamente ";
+	}
 }
 
 void modifica_prestito_meno(vector<Clienti>& v, string& cf) {
@@ -233,6 +239,9 @@ void modifica_prestito_meno(vector<Clienti>& v, string& cf) {
 			check = true; 
 		}
 
-	if (check == false)
+	if (check == false) {
 		cout << "Utente non registrato" << endl;
+	}else {
+		cout << "L'operazione e' stata svolta correttamente ";
+	}
 }

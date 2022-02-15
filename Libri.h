@@ -78,6 +78,7 @@ public:
 	/// <seealso cref="prestato"/>
 	bool getPrestato() const { return prestato; }
 
+	/// <item>Funzione di stampa a video del nome del libro prestato. </item>
 	void stampaPrestato();
 
 	/// <item>Funzione di ridefinizione dell'operatore "=". </item>
@@ -89,10 +90,21 @@ public:
 	/// <item>Funzione di aggiornamento del prezzo di un determinato libri.</item>
 	void modifica_prestito();
 
+	/// <item>Funzione che permette di aggiungere un libro.</item>
 	friend void aggiungi(vector<Libri> &v);
+
+	/// <item>Funzione che permette di stampare a video la lista dei libri.</item>
 	friend void stampa_libri(vector<Libri> v);
+
+	/// <item>Funzione di ricerca del libro al quale modificare il presetito.</item>
 	friend void modifica_prestito_vettore(vector<Libri>& v);
+
+	/// <item>Funzione di eliminazione di un libro.</item>
 	friend void elimina_libro(vector<Libri>& v);
+
+	/// <item>Funzione di ricerca di un determinato libro.</item>
 	friend Libri cerca_libro(vector<Libri> v, string str);
+
+	/// <item>Funzione di ricerca dell'autore di un libro.</item>
 	friend vector<Libri> cerca_autore(vector<Libri> v, string str);
 };
