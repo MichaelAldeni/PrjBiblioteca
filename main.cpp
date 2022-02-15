@@ -21,12 +21,14 @@ int main() {
 	clienti = carica_clienti();
 
 	int scelta;
+	string str;
 
 	cout << "**********************************************" << endl;
 	cout << "***Sei un dipendente (1) o un cliente (2) ?***" << endl;
 	do {
 		cout << "Digita il numero corrispondente: ";
-		cin >> scelta;
+		getline(cin, str);
+		scelta = atoi(str.c_str());
 	} while (scelta != 1 && scelta != 2);
 
 	string d_user;
@@ -38,7 +40,6 @@ int main() {
 	case 1:  // pagina di accesso dipendente 
 		cout << "**********************************************" << endl;
 		cout << "********************ACCEDI********************" << endl;
-		cin.ignore();
 		do {
 			cout << "Username: ";
 			getline(cin, d_user);
@@ -58,11 +59,13 @@ int main() {
 				cout << "***Digita l'operazione da voler effettuare:***" << endl << endl;
 				cout << "(1) Visualizza la lista completa dei libri" << endl;
 				cout << "(2) Aggiungi un nuovo libro" << endl;
-				cout << "(3) Elimina un libro che la biblioteca non ha piÃ¹" << endl;
+				cout << "(3) Elimina un libro che la biblioteca non ha più" << endl;
 				cout << "(4) Menu di gestione dei clienti" << endl;
 				cout << "(5) Esci" << endl << endl;
 				cout << "Digita il numero corrispondente: ";
-				cin >> scelta_dip;
+				getline(cin, str);
+				scelta_dip = atoi(str.c_str());
+
 			} while (scelta_dip != 1 && scelta_dip != 2 && scelta_dip != 3 && scelta_dip != 4 && scelta_dip != 5);
 			switch (scelta_dip) {
 			case 1:
@@ -70,12 +73,10 @@ int main() {
 				stampa_libri(biblioteca);
 				break;
 			case 2:
-				cin.ignore();
 				system("CLS");
 				aggiungi(biblioteca);
 				break;
 			case 3:
-				cin.ignore();
 				system("CLS");
 				elimina_libro(biblioteca);
 				break;
@@ -92,7 +93,8 @@ int main() {
 						cout << "(3) Indietro" << endl;
 						cout << "(4) Esci" << endl << endl;
 						cout << "Digita il numero corrispondente: ";
-						cin >> scelta_dip_cl;
+						getline(cin, str);
+						scelta_dip_cl = atoi(str.c_str());
 					} while (scelta_dip_cl != 1 && scelta_dip_cl != 2 && scelta_dip_cl != 3 && scelta_dip_cl != 4);
 					switch (scelta_dip_cl) {
 					case 1:
@@ -101,7 +103,6 @@ int main() {
 						break;
 					case 2:
 						system("CLS");
-						cin.ignore();
 						elimina_Cliente(clienti);
 						break;
 					case 3:
@@ -128,13 +129,13 @@ int main() {
 			cout << "**********************************************" << endl;
 			cout << "***************ACCEDI/REGISTRATI**************" << endl;
 			cout << " Sei nuovo? Registrati! (1) " << endl;
-			cout << "Hai giÃ  un account? Accedi (2) " << endl;
+			cout << "Hai già un account? Accedi (2) " << endl;
 			cout << "Digita il numero corrispondente: ";
-			cin >> scelta_log;
+			getline(cin, str);
+			scelta_log = atoi(str.c_str());
 		} while (scelta_log != 1 && scelta_log != 2);
 		string username, password, cod_fiscale;
-		
-		cin.ignore();
+
 
 		if (scelta_log == 1)
 			registrazione(clienti);
@@ -156,7 +157,8 @@ int main() {
 					cout << "(6) Modifica username o password" << endl;
 					cout << "(7) Esci" << endl << endl;
 					cout << "Digita il numero corrispondente: ";
-					cin >> scelta_cl;
+					getline(cin, str);
+					scelta_cl = atoi(str.c_str());
 				} while (scelta_cl != 1 && scelta_cl != 2 && scelta_cl != 3 && scelta_cl != 4 && scelta_cl != 5 && scelta_cl != 6 && scelta_cl != 7);
 				string tmp;
 				Libri l;
@@ -168,7 +170,6 @@ int main() {
 					break;
 				case 2:
 					system("CLS");
-					cin.ignore();
 					cout << "Inserisci il titolo del libro da cercare : ";
 					getline(cin, tmp);
 					cout << endl;
@@ -177,7 +178,6 @@ int main() {
 					break;
 				case 3:
 					system("CLS");
-					cin.ignore();
 					cout << "Inserisci il nome dell'autore da cercare: ";
 					getline(cin, tmp);
 					autore = cerca_autore(biblioteca, tmp);
@@ -186,13 +186,11 @@ int main() {
 					break;
 				case 4:
 					system("CLS");
-					cin.ignore();
 					modifica_prestito_vettore(biblioteca);
 					modifica_prestito_piu(clienti, cod_fiscale);
 					break;
 				case 5:
 					system("CLS");
-					cin.ignore();
 					modifica_prestito_vettore(biblioteca);
 					modifica_prestito_meno(clienti, cod_fiscale);
 					break;
@@ -202,9 +200,9 @@ int main() {
 					do {
 						cout << "Cosa vuoi modificare? Username (0) o Password (1) ?" << endl;
 						cout << "Digita il numero corrispondente: ";
-						cin >> i;
+						getline(cin, str);
+						i = atoi(str.c_str());
 					} while (i != 0 && i != 1);
-					cin.ignore();
 					modifica(clienti, i, username, password, cod_fiscale);
 					break;
 				case 7:
@@ -219,5 +217,3 @@ int main() {
 	salva_clienti(clienti);
 	return 0;
 }
-
-//aggiugnere i caricamenti su file ogni volta che si chiude il programma !!!

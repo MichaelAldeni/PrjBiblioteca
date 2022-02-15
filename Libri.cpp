@@ -1,8 +1,3 @@
-/// <summary>File di origine della classe "Clienti"</summary> 
-/// <remarks>
-/// <list type="bullet">
-/// <item>Questo file conterrà tutto il codice riguardante l'implementazione della classe Clienti.</item> 
-/// </remarks>
 /// <seealso cref="Libri.h"/>
 #include "Libri.h"
 
@@ -104,7 +99,7 @@ void modifica_prestito_vettore(vector<Libri>& v) {
 	string n;
 	bool check = false;
 
-	cout << "Inserisci il nome del libro da prestare: ";
+	cout << "Inserisci il nome del libro da prendere in prestito o restituire: ";
 	getline(cin, n);
 
 	vector<Libri>::iterator it;
@@ -112,9 +107,12 @@ void modifica_prestito_vettore(vector<Libri>& v) {
 		if ((*it).getNome() == n) {
 			(*it).modifica_prestito();
 			check = true;
+		
 		}
-	if (check == false)
+	if (check == false) {
 		cout << "Libro non presente in biblioteca";
+	}
+
 }
 
 void elimina_libro(vector<Libri>& v) {
