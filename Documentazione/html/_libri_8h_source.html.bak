@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Libreria 2.0:  File sorgente C:/Users/Administrator/Desktop/File su cui lavorare/PrjBiblioteca/Libri.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Libreria 2.0
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Cerca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_18584afdb5b28ffd280a76c604916332.html">PrjBiblioteca</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Libri.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_libri_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_biblioteca_8h.html">Biblioteca.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="_libri_8h.html#a86b2d62f2d5f8c48a2b7c9689ae4e561">    6</a></span><span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_libri_8h.html#a86b2d62f2d5f8c48a2b7c9689ae4e561">current_id</a> = 0;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_libri.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_libri.html">Libri</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_libri.html#abd967832336de0fa579f46f2b05f0fad">   18</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_libri.html#abd967832336de0fa579f46f2b05f0fad">id</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_libri.html#af7d5596051a58c5abd51152fb069f201">   21</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_libri.html#af7d5596051a58c5abd51152fb069f201">nome</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_libri.html#af8f7532ca5764f5e1b23f5646d76e261">   24</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_libri.html#af8f7532ca5764f5e1b23f5646d76e261">autore</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_libri.html#a472c060e90359c7ba42bf5400010a6b8">   27</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_libri.html#a472c060e90359c7ba42bf5400010a6b8">prezzo_prestito</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_libri.html#a9cf7e7bffb27ce6e20b409e5dd7cd4ca">   30</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_libri.html#a9cf7e7bffb27ce6e20b409e5dd7cd4ca">prestato</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="class_libri.html#a4438d018412c53305996022d51d21942">Libri</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="class_libri.html#a4438d018412c53305996022d51d21942">Libri</a>(<span class="keywordtype">string</span> n, <span class="keywordtype">string</span> a, <span class="keywordtype">float</span> prz);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_libri.html#a6cb991e8b53c19b2b62ad6d902a95d36">~Libri</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="class_libri.html#a4438d018412c53305996022d51d21942">Libri</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_libri.html">Libri</a>&amp; l);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_libri.html#a17befeba1725e71644fb8e80a3c5778d">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_libri.html#a17befeba1725e71644fb8e80a3c5778d">setNome</a>(<span class="keywordtype">string</span> n) { <a class="code hl_variable" href="class_libri.html#af7d5596051a58c5abd51152fb069f201">nome</a> = n; };</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_libri.html#ae6ce03fff3ae1299419c9651b0b66f73">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_libri.html#ae6ce03fff3ae1299419c9651b0b66f73">setAutore</a>(<span class="keywordtype">string</span> a) { <a class="code hl_variable" href="class_libri.html#af7d5596051a58c5abd51152fb069f201">nome</a> = a; };</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_libri.html#a28146f92620ca87c3dbe1fb857f8ed10">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_libri.html#a28146f92620ca87c3dbe1fb857f8ed10">setPrezzo</a>(<span class="keywordtype">float</span> p) { <a class="code hl_variable" href="class_libri.html#a472c060e90359c7ba42bf5400010a6b8">prezzo_prestito</a> = p; };</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_libri.html#af7f34923d287cdc6337707e4b2186aa0">   59</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_libri.html#af7f34923d287cdc6337707e4b2186aa0">getID</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_libri.html#abd967832336de0fa579f46f2b05f0fad">id</a>; };</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_libri.html#a361432d145ec29e2210dcdba1fd6b9be">   64</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_libri.html#a361432d145ec29e2210dcdba1fd6b9be">getNome</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_libri.html#af7d5596051a58c5abd51152fb069f201">nome</a>; };</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_libri.html#a8c6e9d7916dc9402986ea08ce78bcf6a">   69</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_libri.html#a8c6e9d7916dc9402986ea08ce78bcf6a">getAutore</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_libri.html#af8f7532ca5764f5e1b23f5646d76e261">autore</a>; };</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_libri.html#a170e3c0afe37137b8c6cf5b455fec22e">   74</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_libri.html#a170e3c0afe37137b8c6cf5b455fec22e">getPrezzo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_libri.html#a472c060e90359c7ba42bf5400010a6b8">prezzo_prestito</a>; }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_libri.html#ad512caa721e161cca30535136100bd84">   79</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_libri.html#ad512caa721e161cca30535136100bd84">getPrestato</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_libri.html#a9cf7e7bffb27ce6e20b409e5dd7cd4ca">prestato</a>; }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_libri.html#ae850972f516574ff7ef6f3a653cefb2c">stampaPrestato</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_class" href="class_libri.html">Libri</a>&amp; <a class="code hl_function" href="class_libri.html#ad04bc757aafbf8351ca7b9e43cb229dc">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_libri.html">Libri</a>&amp; l);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">friend</span> ostream&amp; <a class="code hl_friend" href="class_libri.html#aeff765924a6af0dbaebe4db3cf88131a">operator&lt;&lt;</a>(ostream&amp; os, <a class="code hl_class" href="class_libri.html">Libri</a> l);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_libri.html#a8f4c00c6eb27f541510d7bd661659f6f">modifica_prestito</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_libri.html#a89ef6b0a4e0c1bdf0974a8b56acede2c">aggiungi</a>(vector&lt;Libri&gt; &amp;v);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_libri.html#ab0a26fb1fc64ef530d6d01eea0fe9f68">stampa_libri</a>(vector&lt;Libri&gt; v);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_libri.html#ab89b7198a1c5f1d4753627379acb3e6f">modifica_prestito_vettore</a>(vector&lt;Libri&gt;&amp; v);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_friend" href="class_libri.html#a3bec6eda896561b6db15d8616681eca5">elimina_libro</a>(vector&lt;Libri&gt;&amp; v);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">friend</span> <a class="code hl_class" href="class_libri.html">Libri</a> <a class="code hl_friend" href="class_libri.html#ad47cb9f2b6a9c2848f9a3f06864a3d25">cerca_libro</a>(vector&lt;Libri&gt; v, <span class="keywordtype">string</span> str);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">friend</span> vector&lt;Libri&gt; <a class="code hl_friend" href="class_libri.html#a1973f57f95c753d8fd7af298532b64d9">cerca_autore</a>(vector&lt;Libri&gt; v, <span class="keywordtype">string</span> str);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>};</div>
+<div class="ttc" id="a_biblioteca_8h_html"><div class="ttname"><a href="_biblioteca_8h.html">Biblioteca.h</a></div></div>
+<div class="ttc" id="a_libri_8h_html_a86b2d62f2d5f8c48a2b7c9689ae4e561"><div class="ttname"><a href="_libri_8h.html#a86b2d62f2d5f8c48a2b7c9689ae4e561">current_id</a></div><div class="ttdeci">static int current_id</div><div class="ttdoc">Variabile utilizzata per autoincrementare l'ID.</div><div class="ttdef"><b>Definition:</b> Libri.h:6</div></div>
+<div class="ttc" id="aclass_libri_html"><div class="ttname"><a href="class_libri.html">Libri</a></div><div class="ttdef"><b>Definition:</b> Libri.h:9</div></div>
+<div class="ttc" id="aclass_libri_html_a170e3c0afe37137b8c6cf5b455fec22e"><div class="ttname"><a href="class_libri.html#a170e3c0afe37137b8c6cf5b455fec22e">Libri::getPrezzo</a></div><div class="ttdeci">float getPrezzo() const</div><div class="ttdef"><b>Definition:</b> Libri.h:74</div></div>
+<div class="ttc" id="aclass_libri_html_a17befeba1725e71644fb8e80a3c5778d"><div class="ttname"><a href="class_libri.html#a17befeba1725e71644fb8e80a3c5778d">Libri::setNome</a></div><div class="ttdeci">void setNome(string n)</div><div class="ttdoc">Funzione di assegnazione del nome del libro.</div><div class="ttdef"><b>Definition:</b> Libri.h:48</div></div>
+<div class="ttc" id="aclass_libri_html_a1973f57f95c753d8fd7af298532b64d9"><div class="ttname"><a href="class_libri.html#a1973f57f95c753d8fd7af298532b64d9">Libri::cerca_autore</a></div><div class="ttdeci">friend vector&lt; Libri &gt; cerca_autore(vector&lt; Libri &gt; v, string str)</div><div class="ttdoc">Funzione di ricerca dell'autore di un libro.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:138</div></div>
+<div class="ttc" id="aclass_libri_html_a28146f92620ca87c3dbe1fb857f8ed10"><div class="ttname"><a href="class_libri.html#a28146f92620ca87c3dbe1fb857f8ed10">Libri::setPrezzo</a></div><div class="ttdeci">void setPrezzo(float p)</div><div class="ttdoc">Funzione di assegnazione del prezzo del libro.</div><div class="ttdef"><b>Definition:</b> Libri.h:54</div></div>
+<div class="ttc" id="aclass_libri_html_a361432d145ec29e2210dcdba1fd6b9be"><div class="ttname"><a href="class_libri.html#a361432d145ec29e2210dcdba1fd6b9be">Libri::getNome</a></div><div class="ttdeci">string getNome() const</div><div class="ttdef"><b>Definition:</b> Libri.h:64</div></div>
+<div class="ttc" id="aclass_libri_html_a3bec6eda896561b6db15d8616681eca5"><div class="ttname"><a href="class_libri.html#a3bec6eda896561b6db15d8616681eca5">Libri::elimina_libro</a></div><div class="ttdeci">friend void elimina_libro(vector&lt; Libri &gt; &amp;v)</div><div class="ttdoc">Funzione di eliminazione di un libro.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:118</div></div>
+<div class="ttc" id="aclass_libri_html_a4438d018412c53305996022d51d21942"><div class="ttname"><a href="class_libri.html#a4438d018412c53305996022d51d21942">Libri::Libri</a></div><div class="ttdeci">Libri()</div><div class="ttdoc">Funzioni pubbliche della classe dei Clienti.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:5</div></div>
+<div class="ttc" id="aclass_libri_html_a472c060e90359c7ba42bf5400010a6b8"><div class="ttname"><a href="class_libri.html#a472c060e90359c7ba42bf5400010a6b8">Libri::prezzo_prestito</a></div><div class="ttdeci">float prezzo_prestito</div><div class="ttdoc">Variabile utilizzata per gestire il prezzo di prestito del libro.</div><div class="ttdef"><b>Definition:</b> Libri.h:27</div></div>
+<div class="ttc" id="aclass_libri_html_a6cb991e8b53c19b2b62ad6d902a95d36"><div class="ttname"><a href="class_libri.html#a6cb991e8b53c19b2b62ad6d902a95d36">Libri::~Libri</a></div><div class="ttdeci">~Libri()</div><div class="ttdoc">Distruttore della classe.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:21</div></div>
+<div class="ttc" id="aclass_libri_html_a89ef6b0a4e0c1bdf0974a8b56acede2c"><div class="ttname"><a href="class_libri.html#a89ef6b0a4e0c1bdf0974a8b56acede2c">Libri::aggiungi</a></div><div class="ttdeci">friend void aggiungi(vector&lt; Libri &gt; &amp;v)</div><div class="ttdoc">Funzione che permette di aggiungere un libro.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:65</div></div>
+<div class="ttc" id="aclass_libri_html_a8c6e9d7916dc9402986ea08ce78bcf6a"><div class="ttname"><a href="class_libri.html#a8c6e9d7916dc9402986ea08ce78bcf6a">Libri::getAutore</a></div><div class="ttdeci">string getAutore() const</div><div class="ttdef"><b>Definition:</b> Libri.h:69</div></div>
+<div class="ttc" id="aclass_libri_html_a8f4c00c6eb27f541510d7bd661659f6f"><div class="ttname"><a href="class_libri.html#a8f4c00c6eb27f541510d7bd661659f6f">Libri::modifica_prestito</a></div><div class="ttdeci">void modifica_prestito()</div><div class="ttdoc">Funzione di aggiornamento del prezzo di un determinato libri.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:52</div></div>
+<div class="ttc" id="aclass_libri_html_a9cf7e7bffb27ce6e20b409e5dd7cd4ca"><div class="ttname"><a href="class_libri.html#a9cf7e7bffb27ce6e20b409e5dd7cd4ca">Libri::prestato</a></div><div class="ttdeci">bool prestato</div><div class="ttdoc">Variabile booleana utilizzata per capire se un libro � stato prestato.</div><div class="ttdef"><b>Definition:</b> Libri.h:30</div></div>
+<div class="ttc" id="aclass_libri_html_ab0a26fb1fc64ef530d6d01eea0fe9f68"><div class="ttname"><a href="class_libri.html#ab0a26fb1fc64ef530d6d01eea0fe9f68">Libri::stampa_libri</a></div><div class="ttdeci">friend void stampa_libri(vector&lt; Libri &gt; v)</div><div class="ttdoc">Funzione che permette di stampare a video la lista dei libri.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:91</div></div>
+<div class="ttc" id="aclass_libri_html_ab89b7198a1c5f1d4753627379acb3e6f"><div class="ttname"><a href="class_libri.html#ab89b7198a1c5f1d4753627379acb3e6f">Libri::modifica_prestito_vettore</a></div><div class="ttdeci">friend void modifica_prestito_vettore(vector&lt; Libri &gt; &amp;v)</div><div class="ttdoc">Funzione di ricerca del libro al quale modificare il presetito.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:98</div></div>
+<div class="ttc" id="aclass_libri_html_abd967832336de0fa579f46f2b05f0fad"><div class="ttname"><a href="class_libri.html#abd967832336de0fa579f46f2b05f0fad">Libri::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">Classe dei libri</div><div class="ttdef"><b>Definition:</b> Libri.h:18</div></div>
+<div class="ttc" id="aclass_libri_html_ad04bc757aafbf8351ca7b9e43cb229dc"><div class="ttname"><a href="class_libri.html#ad04bc757aafbf8351ca7b9e43cb229dc">Libri::operator=</a></div><div class="ttdeci">Libri &amp; operator=(const Libri &amp;l)</div><div class="ttdoc">Funzione di ridefinizione dell'operatore &quot;=&quot;.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:37</div></div>
+<div class="ttc" id="aclass_libri_html_ad47cb9f2b6a9c2848f9a3f06864a3d25"><div class="ttname"><a href="class_libri.html#ad47cb9f2b6a9c2848f9a3f06864a3d25">Libri::cerca_libro</a></div><div class="ttdeci">friend Libri cerca_libro(vector&lt; Libri &gt; v, string str)</div><div class="ttdoc">Funzione di ricerca di un determinato libro.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:154</div></div>
+<div class="ttc" id="aclass_libri_html_ad512caa721e161cca30535136100bd84"><div class="ttname"><a href="class_libri.html#ad512caa721e161cca30535136100bd84">Libri::getPrestato</a></div><div class="ttdeci">bool getPrestato() const</div><div class="ttdef"><b>Definition:</b> Libri.h:79</div></div>
+<div class="ttc" id="aclass_libri_html_ae6ce03fff3ae1299419c9651b0b66f73"><div class="ttname"><a href="class_libri.html#ae6ce03fff3ae1299419c9651b0b66f73">Libri::setAutore</a></div><div class="ttdeci">void setAutore(string a)</div><div class="ttdoc">Funzione di assegnazione dell' autore del libro.</div><div class="ttdef"><b>Definition:</b> Libri.h:51</div></div>
+<div class="ttc" id="aclass_libri_html_ae850972f516574ff7ef6f3a653cefb2c"><div class="ttname"><a href="class_libri.html#ae850972f516574ff7ef6f3a653cefb2c">Libri::stampaPrestato</a></div><div class="ttdeci">void stampaPrestato()</div><div class="ttdoc">Funzione di stampa a video del nome del libro prestato.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:59</div></div>
+<div class="ttc" id="aclass_libri_html_aeff765924a6af0dbaebe4db3cf88131a"><div class="ttname"><a href="class_libri.html#aeff765924a6af0dbaebe4db3cf88131a">Libri::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, Libri l)</div><div class="ttdoc">Funzione di ridefinizione dell'operatore &quot;&lt;&lt;&quot;.</div><div class="ttdef"><b>Definition:</b> Libri.cpp:47</div></div>
+<div class="ttc" id="aclass_libri_html_af7d5596051a58c5abd51152fb069f201"><div class="ttname"><a href="class_libri.html#af7d5596051a58c5abd51152fb069f201">Libri::nome</a></div><div class="ttdeci">string nome</div><div class="ttdoc">Stringa utilizzata per gestire i nomi dei libri.</div><div class="ttdef"><b>Definition:</b> Libri.h:21</div></div>
+<div class="ttc" id="aclass_libri_html_af7f34923d287cdc6337707e4b2186aa0"><div class="ttname"><a href="class_libri.html#af7f34923d287cdc6337707e4b2186aa0">Libri::getID</a></div><div class="ttdeci">int getID() const</div><div class="ttdef"><b>Definition:</b> Libri.h:59</div></div>
+<div class="ttc" id="aclass_libri_html_af8f7532ca5764f5e1b23f5646d76e261"><div class="ttname"><a href="class_libri.html#af8f7532ca5764f5e1b23f5646d76e261">Libri::autore</a></div><div class="ttdeci">string autore</div><div class="ttdoc">Stringa utilizzata per gestire l'autore di ogni libro.</div><div class="ttdef"><b>Definition:</b> Libri.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
