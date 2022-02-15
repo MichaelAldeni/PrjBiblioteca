@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="BIBLIOTECA 2.0">
+<meta name="keywords" content="Biblioteca,Libri,Biblioteca comunale,Login">
+<meta name="author" content="Antonio D'Urso, Alessandro Villa, Michael Aldeni">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title align=”center” > BIBLIOTECA 2.0 </title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body background="sfondo.jpg" >
+	<div class="intestazione"></div>
+		<ul class="topnav">
+		
+		<li>
+			<a href="index.html">HOME</a>
+			<a href="requisiti.html">REQUISITI</a>
+			<a href="manuale.html">MANUALE</a>
+			<a href="testing.html">TESTING</a>
+			<a href="glossario.html">GLOSSARIO</a>
+			<a href="espandibilita.html">ESPANDIBILITA</a>
+			<a href="files.htmll">DOCUMENTAZIONE</a>
+		</li>
+		</ul>
+		<div class="testo">
+		<h1 class="titoli">GLOSSARIO</h1>
+		
+		 
+		<ul>
+		
+		<h4>CLASSE LIBRI:</h4>
+		<li>-<b>id</b>: identificatore univoco autoincrementante;</li>
+		<li>-<b>nome</b>: titolo del libro;</li>
+		<li>-<b>autore</b>: autore del liro;
+		<li><b>prezzo_prestito</b>: somma da pagare nel caso in cui venga smarrito il libro;</li>
+		<li><b>prestato</b>: variabile booleana che indica se il libro è stato già prestato o meno.</li>
+		<li><b>set</b>: per modificare ognuno dei valori presenti nella classe, tranne l’id;</li>
+		<li><b>get</b>: per restituire ognuno dei valori presenti nella classe;</li>
+		<li><b>stampare</b>: per stampare su terminale i valori indicati;</li>
+		<li><b>aggiungi</b>: per aggiungere un libro al vettore;</li>
+		<li><b>modifica_prestito</b>: per modificare la variabile “prestato” all’interno del vettore;</li>
+		<li><b>stampa_libri</b>: per stampare su terminale tutti i libri all’interno del vettore;</li>
+		<li><b>elimina_libro</b>: per eliminare un libro all’interno del vettore;</li>
+		<li><b>cerca_libro</b>: per cercare un libro specifico;</li>
+		<li><b>cerca_autore</b>: per filtrare la ricerca per autore.</li>
+		
+		<h4>CLASSE CLIENTI:</h4>
+		<li><b>nome</b>: nome del cliente;</li>
+		<li><b>cognome</b>: cognome del cliente;</li>
+		<li><b>user</b>: username per la registrazione e l’accesso;</li>
+		<li><b>password</b>: password per la registrazione e l’accesso;</li>
+		<li><b>codice_fiscale</b>: codice fiscale del cliente;</li>
+		<li><b>numero_telefono</b>: numero di telefono del cliente;</li>
+		<li><b>n_prestito</b>: numero di libri che il cliente ha noleggiato;</li>
+		<li><b>set</b>: per modificare ognuno dei valori presenti nella classe;</li>
+		<li><b>get</b>: per restituire ognuno dei valori presenti nella classe;</li>
+		<li><b>registrazione</b>: per registrare un cliente;</li>
+		<li><b>elimina_cliente</b>: per eliminare un cliente all’interno del vettore;</li>
+		<li><b>stampa_vettore</b>: per stampare su terminale i dati di tutti i clienti;</li>
+		<li><b>stampa_cliente</b>: per stampare su terminale i dati di un singolo cliente;</li>
+		<li><b>modifica</b>: per modificare la password e/o l’username dell’account loggato;</li>
+		<li><b>is_on</b>: controlla se la stringa del cliente è presente nel vettore;</li>
+		<li><b>modifica_prestito</b>: per modificare il numero di libri prestati di un cliente.</li>
+		
+		<h4>ALTRE DEFINIZIONI:</h4>
+		<li><b>carica_libro</b>: per caricare su file i libri presenti in biblioteca;</li>
+		<li><b>salva_libro</b>: per salvare su file i libri presenti in biblioteca;</li>
+		<li><b>carica_clienti</b>: per caricare su file i clienti registrati;</li>
+		<li><b>salva_clienti</b>: per salvare su file i clienti registrati;</li>
+		<li><b>login</b>: per controllare se un cliente è già registrato.</li>
+
+		</ul>
+		
+		
+		</div>
+		
+		
+		
+</body>
+</html>

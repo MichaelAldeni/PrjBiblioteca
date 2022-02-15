@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="BIBLIOTECA 2.0">
+<meta name="keywords" content="Biblioteca,Libri,Biblioteca comunale,Login">
+<meta name="author" content="Antonio D'Urso, Alessandro Villa, Michael Aldeni">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title align=”center” > BIBLIOTECA 2.0 </title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body background="sfondo.jpg" >
+	<div class="intestazione"></div>
+		<ul class="topnav">
+		
+		<li>
+			<a href="index.html">HOME</a>
+			<a href="requisiti.html">REQUISITI</a>
+			<a href="manuale.html">MANUALE</a>
+			<a href="testing.html">TESTING</a>
+			<a href="glossario.html">GLOSSARIO</a>
+			<a href="espandibilita.html">ESPANDIBILITA</a>
+			<a href="files.htmll">DOCUMENTAZIONE</a>
+		</li>
+		</ul>
+		<div class="testo">
+		<h1 class="titoli">REQUISITI</h1>
+		
+		 
+		<ul>
+		<h4>Raccolta: descrizione informale dei requisiti (cosa fa l’applicazione);</h4>
+		<p>L’applicazione risulta molto intuitiva da utilizzare, appena verrà avviata, comparirà un menù a video che ci consentirà di scegliere se l’utilizzatore è un <b>dipendente</b> o un <b>utente</b>; 
+		Tutte le scelte nel software avverranno tramite l’utilizzo di valori numerici. 
+		Ci sono due MENU di navigazione diversi per l’utilizzo del programma tra DIPENDENTE e CLIENTE; </p>
+		
+		<p>
+		<h5>NEL CASO FOSSE STATO SCELTO IL DIPENDENTE:</h5>
+		É necessario eseguire il login tramite <b>username</b> e <b>password</b>, se verrà eseguito correttamente l’accesso sarà possibile proseguire nel menù successivo. 
+		</p>
+		
+		<li>Visualizza la lista completa dei libri;</li>
+		<li>Aggiungi un nuovo libro; </li>
+		<li>Elimina un libro che la biblioteca non ha più;</li>
+		<li>Menù di gestione dei clienti;</li>
+		<li>Esci;</li>
+		
+		<h5>MENU DELLA GESTIONE DEI CLIENTI: </h5>
+		<p>Questo menù contiene una sottoclasse dove è possibile eseguire le seguenti operazioni: </p>
+		<li>Mostra i dati dei clienti registrati;</li>
+		<li>Elimina l'account di un cliente;</li>
+		<li>Indietro;</li>
+		<li>Esci;</li>
+		
+		<h5>MENU CLIENTE</h5>
+		In questo menù è possibile:
+		Nel caso si sia un nuovo utente è possibile registrarsi compilando i campi con <b>Nome</b>,<b>Cognome</b>,<b>username</b>, <b>password</b>, <b>codice_fiscale</b> e <b>numero telefonico</b>.
+		OPPURE
+		Eseguire il <b>login</b> tramite  <b>username</b>  e  <b>password</b>, se verrà eseguito correttamente l’accesso sarà possibile proseguire nel menù successivo. É necessario inserire una <b>password</b> di almeno 6 caratteri alfanumerici;
+		<b style="color: red;">Il numero massimo di tentativi riguardanti l’inserimento della password è 6.</b>
+		N.B. In caso di perdita di <b>username</b> e <b>password</b>, sarà possibile tramite l’apposito menù recuperarli. 
+		</p>
+		<li>Un’interfaccia tramite terminale per i clienti;</li>
+		<li>Un’interfaccia tramite terminale per i dipendenti;</li> 
+		<li>Possibilità di salvare e caricare i dati dei libri o gli account dei clienti e ricaricarli in automatico all’avvio del programma;</li>
+		
+		<p>Nella visuale del <b>cliente</b> sarà possibile scegliere tra le seguenti operazioni da effettuare: </p>
+		<li>Visualizza la lista completa dei libri;</li>
+		<li>Ricerca per libro;</li>
+		<li>Ricerca per autore;</li>
+		<li>Noleggio di un libro;</li>
+		<li>Restituzione di un libro;</li>
+		<li>Modifica username o password;</li>
+		<li>Esci.</li>
+		</ul>
+		
+		<ul>
+		<h4>Analisi: descrizione formale dei requisiti (ambiguità, imprecisioni individuate, consistenza)</h4>
+		<p>Per sfruttare al meglio l’applicazione ci sono dei piccoli accorgimenti da rispettare: </p>
+		<p>I clienti invece possono essere inseriti successivamente ed incrementati, nel momento della chiusura del programma verranno salvati nel file “<b>Clienti.txt</b>” generato nella cartella del programma ed  automaticamente nel momento della riapertura
+		del software li caricherà automaticamente. È possibile inserire manualmente o modificare i libri nel file utilizzando il seguente layout per l’inserimento; </p>
+		
+		<li><b>-Riga 1: Nome;Cognome;Codice_fiscale;Numero_telefonico;Username;Password;Numero_dei_libri_presi_in_prestito;
+		<p>ESEMPIO: Giovanni;Signore;SDFV364DA;3334526781;Signore_00;IlSignore;0;</p></b></li>
+		
+		<p>N.B Come delimitatore tra i vari campi è stato utilizzato il “<b>;</b>”, come primo elemento è necessario inserire il <b>nome</b> del cliente; nel secondo campo è necessario inserire il cognome ed è possibile utilizzare anche l’apostrofo (“ <b>‘</b> “) 
+		poiché la variabile è di tipo stringa; dopodichè bisogna inserire il <b>codice fiscale</b> di 16 caratteri,nel caso fosse minore o maggiore, comparirà un messaggio di errore; dopodichè va inserito il <b>numero di telefono</b>, l’<b>username</b> dell’utente
+		(possibilmente <b>alfa numerico</b>) e  la <b>password</b> dell’utente che può contenere anche caratteri speciali. Infine è presente il <b>numero dei libri</b> presi in prestito che deve essere necessariamente un numero di tipo <b>INTERO</b>; </p>
+		
+		<li><p>L’inserimento di una lista di libri, prima dell’apertura ai vari clienti, in modo che loro possano autonomamente accedervi e prenderli in prestito; È possibile anche inserire la lista dei libri nel documento di testo“<b>Libri.txt</b>”(collocato nella 
+		cartella del programma), ma è necessario utilizzare il seguente schema per l’inserimento, altrimenti non verranno letti correttamente: </p></li>
+		
+		<li><b>-Riga 1: Nome del libro;Nome dell’autore;prezzo;
+		<p>ESEMPIO: Il nome della rosa;Umberto Eco;15.5</b></p></li>
+
+		<P>N.B.Ogni singolo campo è diviso da un “<b>;</b>” ed il prezzo deve utilizzare come separatore il “<b>.</b>”; Il nome del libro può contenere spazi, poichè è stata utilizzata una variabile di tipo string in grado di gestirli;</p>
+
+		</ul>
+		
+		
+		</div>
+		
+		
+		
+</body>
+</html>
