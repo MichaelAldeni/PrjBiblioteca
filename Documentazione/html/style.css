@@ -4,7 +4,7 @@ body{
 .intestazione{
 	width:100%;
 	height:15%;
-	background-image: url("Cattura.png");
+	background-image: url("Cattura.PNG");
 	border: 1px solid white; 	
 }
 ul.topnav{
